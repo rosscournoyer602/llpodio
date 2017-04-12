@@ -1,0 +1,16 @@
+{
+  "name": "llpodio",
+  "version": "0.1.1",
+  "description": "Application to manage operations tasks on the LearningLeaders Podio Workspace",
+  "main": "llpodio.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Ross Cournoyer",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.2",
+    "podio-js": "^1.6.0"
+  }
+}
