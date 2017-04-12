@@ -81,4 +81,4 @@ app.post('/signup',urlencodedParser, function(req, res) {
 
 })
 
-module.exports = app;
+app.listen(3000)
