@@ -56,29 +56,33 @@ app.post('/', urlencodedParser, function(req, res) {
 })
 
 app.post('/placement', urlencodedParser, function(req, res) {
-	podio.authenticateWithApp(creds.ptAppID, creds.ptAppToken, function(err) {
-		if (err) {
-			throw new Error(err);
-		}
-		podio.isAuthenticated().then(function() {
-			var itemID = Object.keys(req.body)[0];
-			//console.log(itemID);
-			var token = podio.authObject.accessToken;
-			var path = `/app/${creds.ptAppID}/item/${itemID}?oauth_token=${token}`;
-			var ptFormPath = 'https://podio.com/webforms/18297059/1232341'
-			podio.request('GET', path).then(function(responseData) {
-				console.log(responseData.fields[1].values[0].value);
-				//get all student info, and format a string
-			}).catch(function(f) {
-				console.log(f)
-				})
+	podio.isAuthenticated().then(function() {
+		var itemID = Object.keys(req.body)[0];
+		//console.log(itemID);
+		var token = podio.authObject.accessToken;
+		var path = `/app/${creds.ptAppID}/item/${itemID}?oauth_token=${token}`;
+		var ptFormPath = 'https://podio.com/webforms/18297059/1232341'
+		podio.request('GET', path).then(function(responseData) {
+			console.log(responseData.fields[1].values[0].value);
+			res.end()
+			//get all student info, and format a string
+		}).catch(function(f) {
+			console.log(f)
 		})
-
-	})	
+	}).catch((err) => {
+		console.log(err)
+	})
 })
 
 app.post('/signup',urlencodedParser, function(req, res) {
 
 })
 
-app.listen(3000)
+podio.authenticateWithApp(creds.ptAppID, creds.ptAppToken, function(err) {
+	if (err) {
+		throw new Error(err);
+	}
+	console.log('authenticated with Podio')
+	app.listen(3000)
+});
+

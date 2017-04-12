@@ -15,3 +15,21 @@ use ufhash to generate secure shortcode
 express server listens for url w/shortcode and brings up test
 respond to webhook grade placement test
 respond to webhook generate sign-up link
+
+## How to test
+
+ngrok.io
+
+```
+curl -X POST http://de946173.ngrok.io/placement -d '92'
+```
+
+# Development flow
+
+* Edit one focused change at a time
+* Test for regression (the stuff that was working is still working)
+* git status (consider excluding in .gitignore for files we don't want to commit)
+* git diff
+* git add . (if new files)
+* git commit -m "reasonable explanation of the change"
+
