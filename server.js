@@ -12,6 +12,14 @@ var podio = new Podio({
 	clientSecret: creds.secret
 });
 
+podio.authenticateWithApp(creds.ptAppID, creds.ptAppToken, function(err) {
+	if (err) {
+		throw new Error(err);
+	}
+	console.log('authenticated with Podio')
+	app.listen(3000)
+});
+
 app.get('/', function(req,res) {
 	//console.log(req);
 	res.send('halllo world');
@@ -77,12 +85,4 @@ app.post('/placement', urlencodedParser, function(req, res) {
 app.post('/signup',urlencodedParser, function(req, res) {
 
 })
-
-podio.authenticateWithApp(creds.ptAppID, creds.ptAppToken, function(err) {
-	if (err) {
-		throw new Error(err);
-	}
-	console.log('authenticated with Podio')
-	app.listen(3000)
-});
 

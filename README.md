@@ -21,8 +21,8 @@ respond to webhook generate sign-up link
 ngrok.io
 
 ```
-curl -X POST http://de946173.ngrok.io/placement -d '92'
-```
+curl -X POST http://b9644ec9.ngrok.io/placement -d '92'
+```         [current ngrok link]/placement
 
 # Development flow
 
