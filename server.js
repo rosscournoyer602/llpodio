@@ -94,20 +94,22 @@ app.post('/signup',urlencodedParser, function(req, res) {
 			
 	   		  var student = {
    	    		"studentID": responseData.app_item_id,
-   	    		"firstName": responseData.fields[0].values[0].value,
-   	    		"lastName": responseData.fields[1].values[0].value,
+   	    		"firstName": encodeURIComponent(responseData.fields[0].values[0].value),
+   	    		"lastName": encodeURIComponent(responseData.fields[1].values[0].value),
    	    		"age": Math.floor(responseData.fields[2].values[0].value),
 	   	   		"grade": responseData.fields[3].values[0].value.text,
-	   	   		"school": responseData.fields[4].values[0].value.text,
-	   	   		"parentFirstName": responseData.fields[5].values[0].value,
-	   	   		"parentLastName": responseData.fields[6].values[0].value,
+	   	   		"school": encodeURIComponent(responseData.fields[4].values[0].value.text),
+	   	   		"parentFirstName": encodeURIComponent(responseData.fields[5].values[0].value),
+	   	   		"parentLastName": encodeURIComponent(responseData.fields[6].values[0].value),
 	   	   		"parentEmail": responseData.fields[7].values[0].value,
 	   	   		"parentPhone": responseData.fields[8].values[0].value,
-	   	   		"recommendedCourse": responseData.fields[10].values[0].value.text,
+	   	   		"recommendedCourse": encodeURIComponent(responseData.fields[10].values[0].value.text),
 	   	   		"finalPrice": Math.floor(responseData.fields[12].values[0].value)
 	   		  };
 
+ 			 var link = `https://podio.com/webforms/18330088/1232365?fields[student-id]=${student.studentID}&fields[title]=${student.firstName}&fields[student-last-name]=${student.lastName}&fields[age]=${student.age}&fields[school]=${student.school}&fields[2016-2017-incoming-grade]=${student.grade}&fields[placement-recommendation]=${student.recommendedCourse}&fields[final-price]=${student.finalPrice}`;
 	   		 console.log(student);
+	   		 console.log(link);
 	   		 res.end()
 			}).catch(function(f) {
 				console.log(f)
