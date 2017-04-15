@@ -27,41 +27,41 @@ app.get('/', function(req,res) {
 
 var urlencodedParser = bodyParser.urlencoded({ extended: false })
 
-app.post('/', urlencodedParser, function(req, res) {
+// app.post('/', urlencodedParser, function(req, res) {
 
-	if (req.body.type === 'hook.verify') {
+// 	if (req.body.type === 'hook.verify') {
 
-		var hookID = req.body.hook_id;
+// 		var hookID = req.body.hook_id;
 
-		var postBody = {
-			"code" : req.body.code
-		};
+// 		var postBody = {
+// 			"code" : req.body.code
+// 		};
 
-		var options = {
-  		hostname: 'api.podio.com',
-  		port: 443,
-  		path: `/hook/${hookID}/verify/validate`,
-  		method: 'POST',
-  		headers: {
-              'Content-Type': 'application/json',
-          }
-		};
+// 		var options = {
+//   		hostname: 'api.podio.com',
+//   		port: 443,
+//   		path: `/hook/${hookID}/verify/validate`,
+//   		method: 'POST',
+//   		headers: {
+//               'Content-Type': 'application/json',
+//           }
+// 		};
 
-		var verify = https.request(options, function(res) {
-			res.setEncoding('utf8');
-			res.on('data', function(chunk) {
-				console.log(chunk);
-			});
-		});
+// 		var verify = https.request(options, function(res) {
+// 			res.setEncoding('utf8');
+// 			res.on('data', function(chunk) {
+// 				console.log(chunk);
+// 			});
+// 		});
 
-		verify.write(postBody);
-		verify.end();
-	}
+// 		verify.write(postBody);
+// 		verify.end();
+// 	}
 
-	else {
-		console.log(Object.keys(req.body)[0]);
-	}
-})
+// 	else {
+// 		console.log(Object.keys(req.body)[0]);
+// 	}
+// })
 
 app.post('/placement', urlencodedParser, function(req, res) {
 	podio.isAuthenticated().then(function() {
@@ -83,6 +83,35 @@ app.post('/placement', urlencodedParser, function(req, res) {
 })
 
 app.post('/signup',urlencodedParser, function(req, res) {
+	//gather relevant information from student registry entry and create a sign up link
+	podio.isAuthenticated().then(function() {
+	
+		var token = podio.authObject.accessToken;
+		var path = `/app/${creds.appID}/item/1?oauth_token=${token}`;
 
+		podio.request('GET', path).then(function(responseData) {
+			//console.log(JSON.stringify(responseData, null, 4));
+			
+	   		  var student = {
+   	    		"studentID": responseData.app_item_id,
+   	    		"firstName": responseData.fields[0].values[0].value,
+   	    		"lastName": responseData.fields[1].values[0].value,
+   	    		"age": Math.floor(responseData.fields[2].values[0].value),
+	   	   		"grade": responseData.fields[3].values[0].value.text,
+	   	   		"school": responseData.fields[4].values[0].value.text,
+	   	   		"parentFirstName": responseData.fields[5].values[0].value,
+	   	   		"parentLastName": responseData.fields[6].values[0].value,
+	   	   		"parentEmail": responseData.fields[7].values[0].value,
+	   	   		"parentPhone": responseData.fields[8].values[0].value,
+	   	   		"recommendedCourse": responseData.fields[10].values[0].value.text,
+	   	   		"finalPrice": Math.floor(responseData.fields[12].values[0].value)
+	   		  };
+
+	   		 console.log(student);
+	   		 res.end()
+			}).catch(function(f) {
+				console.log(f)
+				})
+	})
 })
 
