@@ -3,8 +3,7 @@
 var express = require('express');
 var Podio = require('podio-js').api;
 var bodyParser = require('body-parser');
-//var https = require('https');
-//var querystring = require('querystring');
+var grader = require('./placementGrader');
 var app = express();
 var creds = require('./creds.json');
 
@@ -48,6 +47,13 @@ function encodeLookup(responseData, fieldName, defaultValue) {
 	return encodeURIComponent(lookup(responseData, fieldName, defaultValue))
 }
 
+app.post('/grade', urlencodedParser, (req, res) => {
+	podio.isAuthenticated()
+		.then(function () {
+			grader();
+		})
+})
+
 app.post('/placement', urlencodedParser, (req, res) => {
 	podio.isAuthenticated()
 		.then(function() {
@@ -75,7 +81,7 @@ app.post('/placement', urlencodedParser, (req, res) => {
 			}
 
 			var fieldPath = `/item/${student.itemID}/value/placement-test-link-3`;
-			var requestData = { url:`https://podio.com/webforms/18297059/1232341?fields(&fields[student]=${student.studentID}&fields[title]=${student.firstName}%20${student.lastName}&fields[parent-name]=${student.parentFirstName}%20${student.parentLastName}&fields[student-grade]=${student.grade}&fields[student-school]=${student.school}&fields[parent-email]=${student.parentEmail}` };
+			var requestData = { url:`https://podio.com/webforms/18297059/1232341?fields[placement-test-link-2]=${student.itemID}&fields(&fields[student]=${student.studentID}&fields[title]=${student.firstName}%20${student.lastName}&fields[parent-name]=${student.parentFirstName}%20${student.parentLastName}&fields[student-grade]=${student.grade}&fields[student-school]=${student.school}&fields[parent-email]=${student.parentEmail}` };
 
 			return podio.request('PUT', fieldPath, requestData)
 		})
