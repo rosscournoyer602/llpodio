@@ -23,7 +23,7 @@ podio.authenticateWithApp(creds.appID, creds.appToken, function(err) {
 
 app.get('/', function(req,res) {
 	//console.log(req);
-	res.send('Hello World')
+	res.send('LL Podio Client is Up and Listening')
 })
 
 var urlencodedParser = bodyParser.urlencoded({ extended: false })
@@ -50,7 +50,38 @@ function encodeLookup(responseData, fieldName, defaultValue) {
 app.post('/grade', urlencodedParser, (req, res) => {
 	podio.isAuthenticated()
 		.then(function () {
-			grader();
+			var appItemID = Object.keys(req.body)[0];
+			var token = podio.authObject.accessToken;
+			var itemPath = `/app/${creds.ptAppID}/item/${appItemID}?oauth_token=${token}`;
+
+			return podio.request('GET', itemPath) 
+		})
+		.then(function(responseData) {
+			console.log(JSON.stringify(responseData, null, 4));
+			var itemID = responseData.item_id;
+			var grade = Number(lookup(responseData, 'student-grade'));
+			var debXP = Number(lookup(responseData, 'debate-xp'));
+			var classXP = Number(lookup(responseData, 'class-xp'));
+			var arg = Number(lookup(responseData, 'argument-score'));
+			var ref = Number(lookup(responseData, 'refutation-score'));
+			var cs = Number(lookup(responseData, 'current-events-score'));
+			var ps = Number(lookup(responseData, 'public-speaking-score'));
+
+			//console.log('Passed in: ' + grade, debXP, classXP, arg, ref, cs, ps);
+			var placement = grader(grade, debXP, classXP, arg, ref, cs, ps);
+			//console.log(placement);
+			var fieldPath = `/item/${itemID}/value/144010865`
+			var requestData = { value: placement }
+			//perform actions with buttons to hook up globiflow
+			//grade a few tests
+			return podio.request('PUT', fieldPath, requestData);
+		})
+		.then(function(responseData) {
+			res.end(JSON.stringify(responseData, null, 4))	
+		})
+		.catch(function(f) {
+			console.log(f)
+			res.end()
 		})
 })
 
