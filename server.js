@@ -54,7 +54,7 @@ app.post('/grade', urlencodedParser, (req, res) => {
 			var token = podio.authObject.accessToken;
 			var itemPath = `/app/${creds.ptAppID}/item/${appItemID}?oauth_token=${token}`;
 
-			return podio.request('GET', itemPath) 
+			return podio.request('GET', itemPath)
 		})
 		.then(function(responseData) {
 			console.log(JSON.stringify(responseData, null, 4));
