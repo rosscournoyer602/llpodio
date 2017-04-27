@@ -67,13 +67,10 @@ app.post('/grade', urlencodedParser, (req, res) => {
 			var cs = Number(lookup(responseData, 'current-events-score'));
 			var ps = Number(lookup(responseData, 'public-speaking-score'));
 
-			//console.log('Passed in: ' + grade, debXP, classXP, arg, ref, cs, ps);
 			var placement = grader(grade, debXP, classXP, arg, ref, cs, ps);
-			//console.log(placement);
 			var fieldPath = `/item/${itemID}/value/144010865`
 			var requestData = { value: placement }
-			//perform actions with buttons to hook up globiflow
-			//grade a few tests
+
 			return podio.request('PUT', fieldPath, requestData);
 		})
 		.then(function(responseData) {
