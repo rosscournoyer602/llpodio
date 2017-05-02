@@ -5,7 +5,7 @@ var Podio = require('podio-js').api;
 var bodyParser = require('body-parser');
 var grader = require('./placementGrader');
 var app = express();
-//var creds = require('./creds.json');
+var creds = require('./creds.json');
 
 var podio = new Podio({
 	authType: 'app',
