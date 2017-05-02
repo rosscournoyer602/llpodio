@@ -1,8 +1,8 @@
 
 //This function takes input scores from a Podio Placement Test Item and generates
 //a placement recommendation based on the latest rubric. It returns an integer,
-//which corresponds to a field ID value in the Podio item. The mappings are somewhat 
-//arbitrary and determined by Podio.
+//which corresponds to a field ID value in the Podio item. The number for each class
+//is determined by Podio.
 
 // PSDS -1
 // Introduction to Debate - 3

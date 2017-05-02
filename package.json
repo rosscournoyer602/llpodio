@@ -10,8 +10,13 @@
   "author": "Ross Cournoyer",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "1.17.1",
     "express": "^4.15.2",
-    "podio-js": "^1.6.0",
-    "body-parser": "^1.17.1"
+    "podio-js": "^1.6.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://git.heroku.com/llpodio.git"
   }
 }
