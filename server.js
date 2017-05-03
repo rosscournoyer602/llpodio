@@ -5,7 +5,6 @@ var Podio = require('podio-js').api;
 var bodyParser = require('body-parser');
 var grader = require('./placementGrader');
 var app = express();
-require('dotenv').config()
 
 var podio = new Podio({
 	authType: 'app',
@@ -18,7 +17,7 @@ podio.authenticateWithApp(process.env.appID, process.env.appToken, function(err)
 		throw new Error(err);
 	}
 	console.log('authenticated with Podio')
-	app.listen(80)
+	app.listen(process.env.PORT)
 });
 
 app.get('/', function(req,res) {
