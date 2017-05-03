@@ -5,14 +5,15 @@ var Podio = require('podio-js').api;
 var bodyParser = require('body-parser');
 var grader = require('./placementGrader');
 var app = express();
+require('dotenv').config()
 
 var podio = new Podio({
 	authType: 'app',
-	clientId: clientID,
-	clientSecret: secret
+	clientId: process.env.clientID,
+	clientSecret: process.env.secret
 });
 
-podio.authenticateWithApp(appID, appToken, function(err) {
+podio.authenticateWithApp(process.env.appID, process.env.appToken, function(err) {
 	if (err) {
 		throw new Error(err);
 	}
@@ -51,7 +52,7 @@ app.post('/grade', urlencodedParser, (req, res) => {
 		.then(function () {
 			var appItemID = Object.keys(req.body)[0];
 			var token = podio.authObject.accessToken;
-			var itemPath = `/app/${ptAppID}/item/${appItemID}?oauth_token=${token}`;
+			var itemPath = `/app/${process.env.ptAppID}/item/${appItemID}?oauth_token=${token}`;
 
 			return podio.request('GET', itemPath)
 		})
@@ -87,7 +88,7 @@ app.post('/placement', urlencodedParser, (req, res) => {
 
 			var appItemID = Object.keys(req.body)[0];
 			var token = podio.authObject.accessToken;
-			var itemPath = `/app/${appID}/item/${appItemID}?oauth_token=${token}`;
+			var itemPath = `/app/${process.env.appID}/item/${appItemID}?oauth_token=${token}`;
 
 			return podio.request('GET', itemPath) 
 		})
@@ -130,7 +131,7 @@ app.post('/signup', urlencodedParser, (req, res) => {
 
 			var appItemID = Object.keys(req.body)[0];
 			var token = podio.authObject.accessToken;
-			var itemPath = `/app/${appID}/item/${appItemID}?oauth_token=${token}`;
+			var itemPath = `/app/${process.env.appID}/item/${appItemID}?oauth_token=${token}`;
 
 			return podio.request('GET', itemPath)
 		})
