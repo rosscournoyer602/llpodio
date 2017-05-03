@@ -4,7 +4,7 @@
   "description": "Application to manage operations tasks on the LearningLeaders Podio Workspace",
   "main": "llpodio.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "node_modules/.bin/mocha",
     "start": "node server.js"
   },
   "author": "Ross Cournoyer",
@@ -13,9 +13,12 @@
     "body-parser": "1.17.1",
     "dotenv": "^4.0.0",
     "express": "^4.15.2",
+    "mocha": "^3.3.0",
     "podio-js": "^1.6.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "mocha": "^3.3.0"
+  },
   "repository": {
     "type": "git",
     "url": "https://git.heroku.com/llpodio.git"
