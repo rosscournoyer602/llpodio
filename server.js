@@ -143,7 +143,7 @@ app.post('/signup', urlencodedParser, (req, res) => {
 				"firstName": encodeLookup(responseData, 'title', 'FIRST NAME'),
 				"lastName": encodeLookup(responseData, 'last-name', 'LAST NAME'),
 				"age": encodeLookup(responseData, 'age', 'AGE'),
-				"grade": lookup(responseData, 'student-grade', 'GRADE'),
+				"grade": lookup(responseData, 'grade', 'GRADE'),
 				"school": encodeLookup(responseData, 'school', 'SCHOOL'),
 				"parentFirstName": encodeLookup(responseData, 'parent-first-name', 'PARENT FIRST'),
 				"parentLastName": encodeLookup(responseData, 'parent-last-name', 'PARENT LAST'),
