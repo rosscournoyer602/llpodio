@@ -17,7 +17,7 @@ podio.authenticateWithApp(process.env.appID, process.env.appToken, function(err)
 		throw new Error(err);
 	}
 	console.log('authenticated with Podio')
-	app.listen(process.env.PORT)
+	app.listen(3000)
 });
 
 app.get('/', function(req,res) {
