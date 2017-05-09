@@ -49,6 +49,7 @@ function encodeLookup(responseData, fieldName, defaultValue) {
 app.post('/grade', urlencodedParser, (req, res) => {
 	podio.isAuthenticated()
 		.then(function () {
+			console.log(req.body)
 			var appItemID = Object.keys(req.body)[0];
 			var token = podio.authObject.accessToken;
 			var itemPath = `/app/${process.env.ptAppID}/item/${appItemID}?oauth_token=${token}`;
@@ -67,6 +68,7 @@ app.post('/grade', urlencodedParser, (req, res) => {
 			var ps = Number(lookup(responseData, 'public-speaking-score'));
 
 			var placement = grader(grade, debXP, classXP, arg, ref, cs, ps);
+			console.log("Placement = " + placement)
 			var fieldPath = `/item/${itemID}/value/144010865`
 			var requestData = { value: placement }
 
