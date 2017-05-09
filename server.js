@@ -69,7 +69,7 @@ app.post('/grade', urlencodedParser, (req, res) => {
 
 			var placement = grader(grade, debXP, classXP, arg, ref, cs, ps);
 			console.log("Placement = " + placement)
-			var fieldPath = `/item/${itemID}/value/144010865`
+			var fieldPath = `/item/${itemID}/value/145749370`
 			var requestData = { value: placement }
 
 			return podio.request('PUT', fieldPath, requestData);
