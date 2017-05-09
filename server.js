@@ -110,7 +110,7 @@ app.post('/placement', urlencodedParser, (req, res) => {
 			}
 
 			var fieldPath = `/item/${student.itemID}/value/placement-test-link-3`;
-			var requestData = { url:`https://podio.com/webforms/18297059/1232341?fields[placement-test-link-2]=${student.itemID}&fields(&fields[student]=${student.studentID}&fields[title]=${student.firstName}%20${student.lastName}&fields[parent-name]=${student.parentFirstName}%20${student.parentLastName}&fields[student-grade]=${student.grade}&fields[student-school]=${student.school}&fields[parent-email]=${student.parentEmail}` };
+			var requestData = { url:`https://podio.com/webforms/18489237/1244278?fields[placement-test-link-2]=${student.itemID}&fields(&fields[student]=${student.studentID}&fields[title]=${student.firstName}%20${student.lastName}&fields[parent-name]=${student.parentFirstName}%20${student.parentLastName}&fields[student-grade]=${student.grade}&fields[student-school]=${student.school}&fields[parent-email]=${student.parentEmail}` };
 
 			return podio.request('PUT', fieldPath, requestData)
 		})
@@ -145,7 +145,7 @@ app.post('/signup', urlencodedParser, (req, res) => {
 				"firstName": encodeLookup(responseData, 'title', 'FIRST NAME'),
 				"lastName": encodeLookup(responseData, 'last-name', 'LAST NAME'),
 				"age": encodeLookup(responseData, 'age', 'AGE'),
-				"grade": lookup(responseData, 'student-grade', 'GRADE'),
+				"grade": lookup(responseData, 'grade', 'GRADE'),
 				"school": encodeLookup(responseData, 'school', 'SCHOOL'),
 				"parentFirstName": encodeLookup(responseData, 'parent-first-name', 'PARENT FIRST'),
 				"parentLastName": encodeLookup(responseData, 'parent-last-name', 'PARENT LAST'),
@@ -156,7 +156,7 @@ app.post('/signup', urlencodedParser, (req, res) => {
 			}
 
 			var fieldPath = `/item/${student.itemID}/value/signup-link-2`;	
-			var requestData = { url: `https://podio.com/webforms/18330088/1232365?fields[student-id]=${student.studentID}&fields[title]=${student.firstName}&fields[student-last-name]=${student.lastName}&fields[parent-first-name]=${student.parentFirstName}&fields[parent-last-name]=${student.parentLastName}&fields[parent-email-address]=${student.parentEmail}&fields[parent-phone-2]=${student.parentPhone}&fields[age]=${student.age}&fields[school]=${student.school}&fields[2016-2017-incoming-grade]=${student.grade}&fields[placement-recommendation]=${student.recommendedCourse}&fields[final-price]=${student.finalPrice}` };
+			var requestData = { url: `https://podio.com/webforms/18489238/1244279?fields[student-id]=${student.studentID}&fields[title]=${student.firstName}&fields[student-last-name]=${student.lastName}&fields[parent-first-name]=${student.parentFirstName}&fields[parent-last-name]=${student.parentLastName}&fields[parent-email-address]=${student.parentEmail}&fields[parent-phone-2]=${student.parentPhone}&fields[age]=${student.age}&fields[school]=${student.school}&fields[student-grade]=${student.grade}&fields[placement-recommendation]=${student.recommendedCourse}&fields[final-price]=${student.finalPrice}` };
 
 			return podio.request('PUT', fieldPath, requestData)
 		})
