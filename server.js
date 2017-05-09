@@ -5,20 +5,19 @@ var Podio = require('podio-js').api;
 var bodyParser = require('body-parser');
 var grader = require('./placementGrader');
 var app = express();
-var creds = require('./creds.json');
 
 var podio = new Podio({
 	authType: 'app',
-	clientId: creds.clientID,
-	clientSecret: creds.secret
+	clientId: process.env.clientID,
+	clientSecret: process.env.secret
 });
 
-podio.authenticateWithApp(creds.appID, creds.appToken, function(err) {
+podio.authenticateWithApp(process.env.appID, process.env.appToken, function(err) {
 	if (err) {
 		throw new Error(err);
 	}
 	console.log('authenticated with Podio')
-	app.listen(3000)
+	app.listen(process.env.PORT)
 });
 
 app.get('/', function(req,res) {
@@ -50,9 +49,10 @@ function encodeLookup(responseData, fieldName, defaultValue) {
 app.post('/grade', urlencodedParser, (req, res) => {
 	podio.isAuthenticated()
 		.then(function () {
+			console.log(req.body);
 			var appItemID = Object.keys(req.body)[0];
 			var token = podio.authObject.accessToken;
-			var itemPath = `/app/${creds.ptAppID}/item/${appItemID}?oauth_token=${token}`;
+			var itemPath = `/app/${process.env.ptAppID}/item/${appItemID}?oauth_token=${token}`;
 
 			return podio.request('GET', itemPath)
 		})
@@ -68,6 +68,7 @@ app.post('/grade', urlencodedParser, (req, res) => {
 			var ps = Number(lookup(responseData, 'public-speaking-score'));
 
 			var placement = grader(grade, debXP, classXP, arg, ref, cs, ps);
+			console.log("Placement = " + placement)
 			var fieldPath = `/item/${itemID}/value/144010865`
 			var requestData = { value: placement }
 
@@ -88,7 +89,7 @@ app.post('/placement', urlencodedParser, (req, res) => {
 
 			var appItemID = Object.keys(req.body)[0];
 			var token = podio.authObject.accessToken;
-			var itemPath = `/app/${creds.appID}/item/${appItemID}?oauth_token=${token}`;
+			var itemPath = `/app/${process.env.appID}/item/${appItemID}?oauth_token=${token}`;
 
 			return podio.request('GET', itemPath) 
 		})
@@ -131,7 +132,7 @@ app.post('/signup', urlencodedParser, (req, res) => {
 
 			var appItemID = Object.keys(req.body)[0];
 			var token = podio.authObject.accessToken;
-			var itemPath = `/app/${creds.appID}/item/${appItemID}?oauth_token=${token}`;
+			var itemPath = `/app/${process.env.appID}/item/${appItemID}?oauth_token=${token}`;
 
 			return podio.request('GET', itemPath)
 		})
