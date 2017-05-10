@@ -154,7 +154,7 @@ app.post('/signup', urlencodedParser, (req, res) => {
 			}
 
 			var fieldPath = `/item/${student.itemID}/value/signup-link-2`;	
-			var requestData = { url: `https://podio.com/webforms/18489238/1244279?fields[student-id]=${student.studentID}&fields[title]=${student.firstName}&fields[student-last-name]=${student.lastName}&fields[parent-first-name]=${student.parentFirstName}&fields[parent-last-name]=${student.parentLastName}&fields[parent-email-address]=${student.parentEmail}&fields[parent-phone-2]=${student.parentPhone}&fields[age]=${student.age}&fields[school]=${student.school}&fields[student-grade]=${student.grade}&fields[placement-recommendation]=${student.recommendedCourse}&fields[final-price]=${student.finalPrice}` };
+			var requestData = { url: `https://podio.com/webforms/18489238/1244279?fields[student-id]=${student.studentID}&fields[title]=${student.firstName}&fields[student-last-name]=${student.lastName}&fields[parent-first-name]=${student.parentFirstName}&fields[parent-last-name]=${student.parentLastName}&fields[parent-email-address]=${student.parentEmail}&fields[parent-phone-2]=${student.parentPhone}&fields[age]=${student.age}&fields[student-grade]=${student.grade}&fields[placement-recommendation]=${student.recommendedCourse}&fields[school]=${student.school}` };
 
 			return podio.request('PUT', fieldPath, requestData)
 		})
