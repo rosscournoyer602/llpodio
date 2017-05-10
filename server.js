@@ -108,7 +108,7 @@ app.post('/placement', urlencodedParser, (req, res) => {
 			}
 
 			var fieldPath = `/item/${student.itemID}/value/placement-test-link-3`;
-			var requestData = { url:`https://podio.com/webforms/18489237/1244278?fields[placement-test-link-2]=${student.itemID}&fields(&fields[student]=${student.studentID}&fields[title]=${student.firstName}%20${student.lastName}&fields[parent-name]=${student.parentFirstName}%20${student.parentLastName}&fields[student-grade]=${student.grade}&fields[student-school]=${student.school}&fields[parent-email]=${student.parentEmail}` };
+			var requestData = { url:`https://podio.com/webforms/18489237/1244278?fields[placement-test-link-2]=${student.itemID}&fields(&fields[student]=${student.studentID}&fields[title]=${student.firstName}%20${student.lastName}&fields[parent-name]=${student.parentFirstName}%20${student.parentLastName}&fields[parent-email]=${student.parentEmail}` };
 
 			return podio.request('PUT', fieldPath, requestData)
 		})
