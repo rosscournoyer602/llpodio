@@ -68,7 +68,7 @@ app.post('/grade', urlencodedParser, (req, res) => {
 			var ps = Number(lookup(responseData, 'public-speaking-score'));
 
 			var placement = grader(grade, debXP, classXP, arg, ref, cs, ps);
-			var fieldPath = `/item/${itemID}/value/145749370`
+			var fieldPath = `/item/${itemID}/value/144010865`
 			var requestData = { value: placement }
 
 			return podio.request('PUT', fieldPath, requestData);
