@@ -52,7 +52,7 @@ app.post('/grade', urlencodedParser, (req, res) => {
 		.then(function () {
 			var appItemID = Object.keys(req.body)[0];
 			var token = podio.authObject.accessToken;
-			var itemPath = `/app/${creds.ptAppID}/item/${appItemID}?oauth_token=${token}`;
+			var itemPath = `/app/${process.env.ptAppID}/item/${appItemID}?oauth_token=${token}`;
 
 			return podio.request('GET', itemPath)
 		})
@@ -88,7 +88,7 @@ app.post('/placement', urlencodedParser, (req, res) => {
 
 			var appItemID = Object.keys(req.body)[0];
 			var token = podio.authObject.accessToken;
-			var itemPath = `/app/${creds.appID}/item/${appItemID}?oauth_token=${token}`;
+			var itemPath = `/app/${process.env.appID}/item/${appItemID}?oauth_token=${token}`;
 
 			return podio.request('GET', itemPath) 
 		})
@@ -136,7 +136,7 @@ app.post('/signup', urlencodedParser, (req, res) => {
 
 			var appItemID = Object.keys(req.body)[0];
 			var token = podio.authObject.accessToken;
-			var itemPath = `/app/${creds.appID}/item/${appItemID}?oauth_token=${token}`;
+			var itemPath = `/app/${process.env.appID}/item/${appItemID}?oauth_token=${token}`;
 
 			return podio.request('GET', itemPath)
 		})
