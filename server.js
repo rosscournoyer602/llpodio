@@ -1,11 +1,12 @@
 'use strict'
 
-var express = require('express');
-var Podio = require('podio-js').api;
-var bodyParser = require('body-parser');
-var grader = require('./placementGrader');
-var app = express();
-var creds = require('./creds.json');
+var express = require('express')
+var Podio = require('podio-js').api
+var bodyParser = require('body-parser')
+var grader = require('./placementGrader')
+var app = express()
+var creds = require('./creds.json')
+var shorten = require('./shortener')
 
 var podio = new Podio({
 	authType: 'app',
@@ -15,7 +16,7 @@ var podio = new Podio({
 
 podio.authenticateWithApp(creds.appID, creds.appToken, function(err) {
 	if (err) {
-		throw new Error(err);
+		throw new Error(err)
 	}
 	console.log('authenticated with Podio')
 	app.listen(3000)
@@ -93,7 +94,7 @@ app.post('/placement', urlencodedParser, (req, res) => {
 			return podio.request('GET', itemPath) 
 		})
 		.then(function(responseData) {
-			console.log(JSON.stringify(responseData, null, 4));
+			//console.log(JSON.stringify(responseData, null, 4));
 			var student = {
 				"itemID": responseData.item_id,
 				"studentID": responseData.app_item_id,
@@ -108,10 +109,14 @@ app.post('/placement', urlencodedParser, (req, res) => {
 				"parentPhone": encodeLookup(responseData, 'parent-phone', 'PARENT PHONE'),
 			}
 
-			var fieldPath = `/item/${student.itemID}/value/placement-test-link-3`;
-			var requestData = { url:`https://podio.com/webforms/18297059/1232341?fields[placement-test-link-2]=${student.itemID}&fields(&fields[student]=${student.studentID}&fields[title]=${student.firstName}%20${student.lastName}&fields[parent-name]=${student.parentFirstName}%20${student.parentLastName}&fields[student-grade]=${student.grade}&fields[student-school]=${student.school}&fields[parent-email]=${student.parentEmail}` };
-
-			return podio.request('PUT', fieldPath, requestData)
+			var fieldPath = `/item/${student.itemID}/value/placement-test-link-3`
+			var url = `https://podio.com/webforms/18297059/1232341?fields[placement-test-link-2]=${student.itemID}&fields(&fields[student]=${student.studentID}&fields[title]=${student.firstName}%20${student.lastName}&fields[parent-name]=${student.parentFirstName}%20${student.parentLastName}&fields[student-grade]=${student.grade}&fields[student-school]=${student.school}&fields[parent-email]=${student.parentEmail}`
+			// ^ will be shortened by shortener
+			return shorten(url, fieldPath)
+		})
+		.then(function(responseData) {
+			var requestData = { url: responseData.url }
+			return podio.request('PUT', responseData.fieldPath, requestData)
 		})
 		.then(function(responseData) {
 			res.end(JSON.stringify(responseData, null, 4))
@@ -127,6 +132,7 @@ app.post('/signup', urlencodedParser, (req, res) => {
 	//gather information from the item student registry entry and format a link
 	//to pre-populated Podio webform
 	podio.isAuthenticated()
+	
 		.then(function() {
 
 			var appItemID = Object.keys(req.body)[0];
@@ -136,8 +142,7 @@ app.post('/signup', urlencodedParser, (req, res) => {
 			return podio.request('GET', itemPath)
 		})
 		.then(function(responseData) {
-			//this request works
-			//console.log(JSON.stringify(responseData, null, 4));
+
 			var student = {
 				"itemID": responseData.item_id,
 				"studentID": responseData.app_item_id,
@@ -154,19 +159,21 @@ app.post('/signup', urlencodedParser, (req, res) => {
 				"finalPrice": encodeLookup(responseData, 'final-price', '8800')
 			}
 
-			var fieldPath = `/item/${student.itemID}/value/signup-link-2`;	
-			var requestData = { url: `https://podio.com/webforms/18330088/1232365?fields[student-id]=${student.studentID}&fields[title]=${student.firstName}&fields[student-last-name]=${student.lastName}&fields[parent-first-name]=${student.parentFirstName}&fields[parent-last-name]=${student.parentLastName}&fields[parent-email-address]=${student.parentEmail}&fields[parent-phone-2]=${student.parentPhone}&fields[age]=${student.age}&fields[school]=${student.school}&fields[2016-2017-incoming-grade]=${student.grade}&fields[placement-recommendation]=${student.recommendedCourse}&fields[final-price]=${student.finalPrice}` };
+			var fieldPath = `/item/${student.itemID}/value/signup-link-2`
+			var url = `https://podio.com/webforms/18297059/1232341?fields[placement-test-link-2]=${student.itemID}&fields(&fields[student]=${student.studentID}&fields[title]=${student.firstName}%20${student.lastName}&fields[parent-name]=${student.parentFirstName}%20${student.parentLastName}&fields[student-grade]=${student.grade}&fields[student-school]=${student.school}&fields[parent-email]=${student.parentEmail}`
 
-			return podio.request('PUT', fieldPath, requestData)
+			return shorten(url, fieldPath)
 		})
 		.then(function(responseData) {
-
-			console.log(JSON.stringify(responseData, null, 4))
+			var requestData = { url: responseData.url }
+			return podio.request('PUT', responseData.fieldPath, requestData)
+		})
+		.then(function(responseData) {
 			res.end(JSON.stringify(responseData, null, 4))
 		})
 		.catch(function(f) {
 			console.log(f)
-			res.end(JSON.stringify(f, null, 4))
+			res.end(JSON.stringify(responseData, null, 4))
 		})
 })
 
