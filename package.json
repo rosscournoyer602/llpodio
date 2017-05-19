@@ -11,10 +11,9 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "1.17.1",
-    "dotenv": "^4.0.0",
     "express": "^4.15.2",
     "mocha": "^3.3.0",
-    "podio-js": "^1.6.0"
+    "podio-js": "^1.6.0",
   },
   "devDependencies": {
     "mocha": "^3.3.0"
