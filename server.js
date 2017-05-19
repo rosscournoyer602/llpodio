@@ -159,7 +159,7 @@ app.post('/signup', urlencodedParser, (req, res) => {
 			}
 
 			var fieldPath = `/item/${student.itemID}/value/signup-link-2`
-			var url = `https://podio.com/webforms/18297059/1232341?fields[placement-test-link-2]=${student.itemID}&fields(&fields[student]=${student.studentID}&fields[title]=${student.firstName}%20${student.lastName}&fields[parent-name]=${student.parentFirstName}%20${student.parentLastName}&fields[student-grade]=${student.grade}&fields[student-school]=${student.school}&fields[parent-email]=${student.parentEmail}`
+			var url = `https://podio.com/webforms/18489238/1244279?fields[student-id]=${student.studentID}&fields[title]=${student.firstName}&fields[student-last-name]=${student.lastName}&fields[parent-first-name]=${student.parentFirstName}&fields[parent-last-name]=${student.parentLastName}&fields[parent-email-address]=${student.parentEmail}&fields[parent-phone-2]=${student.parentPhone}&fields[age]=${student.age}&fields[school]=${student.school}&fields[student-grade]=${student.grade}&fields[placement-recommendation]=${student.recommendedCourse}`
 
 			return shorten(url, fieldPath)
 		})
