@@ -10,11 +10,11 @@ var shorten = require('./shortener')
 
 var podio = new Podio({
 	authType: 'app',
-	clientId: creds.clientID,
-	clientSecret: creds.secret
+	clientId: process.env.clientID,
+	clientSecret: process.env.secret
 });
 
-podio.authenticateWithApp(creds.appID, creds.appToken, function(err) {
+podio.authenticateWithApp(process.env.appID, process.env.appToken, function(err) {
 	if (err) {
 		throw new Error(err)
 	}
