@@ -139,7 +139,7 @@ var grade = function(grade, classXP, compXP, arg, ref, ce, ps) {
 //test cases
 // console.log('Test Cases' + '\n');
 // console.log('5th Grade Test: ' + '\n');
-// console.log(grade(5,2,2,2,2,2,2));
+ console.log(grade(5,2,2,2,2,2,2));
 // console.log('Should return 1');
 
 // console.log('6th Grade Test: ' + '\n');
