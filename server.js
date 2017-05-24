@@ -28,6 +28,21 @@ app.get('/', function(req,res) {
 	res.send('LL Podio Client is Up and Listening')
 })
 
+app.get('/app', function(req,res) {
+	podio.isAuthenticated()
+	.then(function() {
+		var token = podio.authObject.accessToken;
+		var appPath = `/app/${creds.ptAppID}`
+
+		return podio.request('GET', appPath)
+	}).then(function(responseData) {
+		res.end(JSON.stringify(responseData, null, 4))
+	})
+	.catch(function(e) {
+		console.log(e)
+	})
+})
+
 var urlencodedParser = bodyParser.urlencoded({ extended: false })
 
 app.post('/grade', urlencodedParser, (req, res) => {
