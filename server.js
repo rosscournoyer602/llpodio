@@ -107,7 +107,7 @@ app.post('/placement', urlencodedParser, (req, res) => {
 			}
 
 			var fieldPath = `/item/${student.itemID}/value/placement-test-link-3`
-			var url = `https://podio.com/webforms/18297059/1232341?fields[placement-test-link-2]=${student.itemID}&fields(&fields[student]=${student.studentID}&fields[title]=${student.firstName}%20${student.lastName}&fields[parent-name]=${student.parentFirstName}%20${student.parentLastName}&fields[student-grade]=${student.grade}&fields[student-school]=${student.school}&fields[parent-email]=${student.parentEmail}`
+			var url = `https://podio.com/webforms/18489237/1244278?fields[placement-test-link-2]=${student.itemID}&fields(&fields[student]=${student.studentID}&fields[title]=${student.firstName}%20${student.lastName}&fields[parent-name]=${student.parentFirstName}%20${student.parentLastName}&fields[student-grade]=${student.grade}&fields[student-school]=${student.school}&fields[parent-email]=${student.parentEmail}`
 			// ^ will be shortened by shortener
 			return shorten(url, fieldPath)
 		})
@@ -142,19 +142,20 @@ app.post('/signup', urlencodedParser, (req, res) => {
 				"firstName": lookup(responseData, 'title', 'FIRST NAME'),
 				"lastName": lookup(responseData, 'last-name', 'LAST NAME'),
 				"age": lookup(responseData, 'age', 'AGE'),
-				"grade": lookup(responseData, 'student-grade', 'GRADE'),
+				"grade": lookup(responseData, 'grade', 'GRADE'),
 				"school": lookup(responseData, 'school', 'SCHOOL'),
 				"parentFirstName": lookup(responseData, 'parent-first-name', 'PARENT FIRST'),
 				"parentLastName": lookup(responseData, 'parent-last-name', 'PARENT LAST'),
 				"parentEmail": lookup(responseData, 'parent-email-2', 'PARENT EMAIL'),
 				"parentPhone": lookup(responseData, 'parent-phone-2', 'PARENT PHONE'),
+				"homeAddress": lookup(responseData, 'home-address', 'ADDRESS'),
+				"previousCourse": lookup(responseData, 'previous-course-if-any', 'PREVIOUS'),
 				"recommendedCourse": lookup(responseData, 'placement-recommentation','Empty'),
 				"finalPrice": lookup(responseData, 'final-price', '8800')
 			}
 
 			var fieldPath = `/item/${student.itemID}/value/signup-link-2`
-			var url = `https://podio.com/webforms/18297059/1232341?fields[placement-test-link-2]=${student.itemID}&fields(&fields[student]=${student.studentID}&fields[title]=${student.firstName}%20${student.lastName}&fields[parent-name]=${student.parentFirstName}%20${student.parentLastName}&fields[student-grade]=${student.grade}&fields[student-school]=${student.school}&fields[parent-email]=${student.parentEmail}`
-
+			var url = `https://podio.com/webforms/18489238/1244279?fields[title]=${student.firstName}&fields[student-last-name]=${student.lastName}&fields[parent-first-name]=${student.parentFirstName}&fields[parent-phone-number]=${student.parentPhone}&fields[parent-last-name]=${student.parentLastName}&fields[2016-2017-incoming-grade]=${student.grade}&fields[age]=${student.age}&fields[school]=${student.school}&fields[previous-course]=${student.previousCourse}&fields[placement-recommendation]=${student.recommendedCourse}&fields[parent-email-address]=${student.parentEmail}`
 			return shorten(url,fieldPath)
 		})
 		.then(function(responseData) {
