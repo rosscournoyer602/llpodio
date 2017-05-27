@@ -126,10 +126,7 @@ app.post('/placement', urlencodedParser, (req, res) => {
 		})
 })
 
-//webhook sends itemID to node server
 app.post('/signup', urlencodedParser, (req, res) => {
-	//gather information from the item student registry entry and format a link
-	//to pre-populated Podio webform
 	podio.isAuthenticated()
 	
 		.then(function() {
@@ -145,21 +142,23 @@ app.post('/signup', urlencodedParser, (req, res) => {
 			var student = {
 				"itemID": responseData.item_id,
 				"studentID": responseData.app_item_id,
-				"firstName": encodeLookup(responseData, 'title', 'FIRST NAME'),
-				"lastName": encodeLookup(responseData, 'last-name', 'LAST NAME'),
-				"age": encodeLookup(responseData, 'age', 'AGE'),
-				"grade": lookup(responseData, 'student-grade', 'GRADE'),
-				"school": encodeLookup(responseData, 'school', 'SCHOOL'),
-				"parentFirstName": encodeLookup(responseData, 'parent-first-name', 'PARENT FIRST'),
-				"parentLastName": encodeLookup(responseData, 'parent-last-name', 'PARENT LAST'),
-				"parentEmail": encodeLookup(responseData, 'parent-email-2', 'PARENT EMAIL'),
-				"parentPhone": encodeLookup(responseData, 'parent-phone-2', 'PARENT PHONE'),
-				"recommendedCourse": encodeLookup(responseData, 'placement-recommentation','Empty'),
-				"finalPrice": encodeLookup(responseData, 'final-price', '8800')
+				"firstName": lookup(responseData, 'title', 'FIRST NAME'),
+				"lastName": lookup(responseData, 'last-name', 'LAST NAME'),
+				"age": lookup(responseData, 'age', 'AGE'),
+				"grade": lookup(responseData, 'grade', 'GRADE'),
+				"school": lookup(responseData, 'school', 'SCHOOL'),
+				"parentFirstName": lookup(responseData, 'parent-first-name', 'PARENT FIRST'),
+				"parentLastName": lookup(responseData, 'parent-last-name', 'PARENT LAST'),
+				"parentEmail": lookup(responseData, 'parent-email-2', 'PARENT EMAIL'),
+				"parentPhone": lookup(responseData, 'parent-phone-2', 'PARENT PHONE'),
+				"homeAddress": lookup(responseData, 'home-address', 'ADDRESS'),
+				"previousCourse": lookup(responseData, 'previous-course-if-any', 'PREVIOUS'),
+				"recommendedCourse": lookup(responseData, 'placement-recommentation','Empty'),
+				"finalPrice": lookup(responseData, 'final-price', '8800')
 			}
 
 			var fieldPath = `/item/${student.itemID}/value/signup-link-2`
-			var url = `https://podio.com/webforms/18489238/1244279?fields[student-id]=${student.studentID}&fields[title]=${student.firstName}&fields[student-last-name]=${student.lastName}&fields[parent-first-name]=${student.parentFirstName}&fields[parent-last-name]=${student.parentLastName}&fields[parent-email-address]=${student.parentEmail}&fields[parent-phone-2]=${student.parentPhone}&fields[age]=${student.age}&fields[school]=${student.school}&fields[student-grade]=${student.grade}&fields[placement-recommendation]=${student.recommendedCourse}`
+			var url = `https://podio.com/webforms/18489238/1244279?fields[title]=${student.firstName}&fields[student-last-name]=${student.lastName}&fields[parent-first-name]=${student.parentFirstName}&fields[parent-phone-number]=${student.parentPhone}&fields[parent-last-name]=${student.parentLastName}&fields[2016-2017-incoming-grade]=${student.grade}&fields[age]=${student.age}&fields[school]=${student.school}&fields[previous-course]=${student.previousCourse}&fields[placement-recommendation]=${student.recommendedCourse}&fields[parent-email-address]=${student.parentEmail}`
 
 			return shorten(url, fieldPath)
 		})
