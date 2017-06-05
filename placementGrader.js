@@ -18,7 +18,7 @@
 
 var grade = function(grade, classXP, compXP, arg, ref, ce, ps) {
 
-
+	var map = require('./mapper.js')
 	var total = classXP + compXP + arg + ref + ce + ps;
 	var totalBeforePS = classXP + compXP + arg + ref + ce;
 	var totalXP = classXP + compXP;
@@ -27,12 +27,7 @@ var grade = function(grade, classXP, compXP, arg, ref, ce, ps) {
 	var placement;
 	var courseRec;
 
-		// console.log('\n');
-		// console.log('Grade = ' + grade);
-		// console.log('Total = ' + total);
-		// console.log('TotalXP = ' + totalXP);
-		// console.log('argRefCe = ' + argRefCe);
-
+	//use map variable to make readable return values
 	if (grade === 5) {
 
 		return 1;
