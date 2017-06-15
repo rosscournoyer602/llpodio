@@ -1,0 +1,2546 @@
+{
+    "url_label": "placement-tests",
+    "app_id": 18489237,
+    "layouts": {
+        "badge": {
+            "default": true,
+            "fields": {
+                "footer_3": {
+                    "type": "virtual",
+                    "id": "comment_count"
+                },
+                "details_2": {
+                    "type": "field",
+                    "id": 145749341
+                },
+                "header": {
+                    "type": "field",
+                    "id": 145749337
+                },
+                "details_3": {
+                    "type": "field",
+                    "id": 145749336
+                },
+                "details_1": {
+                    "type": "field",
+                    "id": 146592312
+                },
+                "footer_1": {
+                    "type": "virtual",
+                    "id": "created_on"
+                },
+                "footer_2": {
+                    "type": "virtual",
+                    "id": "created_by"
+                },
+                "content": {
+                    "type": "field",
+                    "id": 146592325
+                }
+            }
+        },
+        "badge_v2": {
+            "default": true,
+            "fields": {
+                "footer_3": {
+                    "type": "virtual",
+                    "id": "comment_count"
+                },
+                "details_2": {
+                    "type": "field",
+                    "id": 145749341
+                },
+                "header": {
+                    "type": "field",
+                    "id": 145749337
+                },
+                "details_3": {
+                    "type": "field",
+                    "id": 145749336
+                },
+                "details_1": {
+                    "type": "field",
+                    "id": 146592312
+                },
+                "footer_1": {
+                    "type": "virtual",
+                    "id": "created_on"
+                },
+                "footer_2": {
+                    "type": "virtual",
+                    "id": "created_by"
+                },
+                "content": {
+                    "type": "field",
+                    "id": 146592325
+                }
+            }
+        },
+        "relationship": {
+            "default": true,
+            "fields": {
+                "details_4": null,
+                "details_1": {
+                    "type": "field",
+                    "id": 146592312
+                },
+                "details_3": null,
+                "details_2": {
+                    "type": "field",
+                    "id": 145749369
+                },
+                "header": {
+                    "type": "field",
+                    "id": 145749336
+                }
+            }
+        }
+    },
+    "owner": {
+        "user_id": 3522114,
+        "space_id": null,
+        "image": {
+            "hosted_by": "podio",
+            "hosted_by_humanized_name": "Podio",
+            "thumbnail_link": "https://d2cmuesa4snpwn.cloudfront.net/public/272579533",
+            "link": "https://d2cmuesa4snpwn.cloudfront.net/public/272579533",
+            "file_id": 272579533,
+            "external_file_id": null,
+            "link_target": "_blank"
+        },
+        "profile_id": 185198277,
+        "org_id": null,
+        "link": "https://podio.com/users/3522114",
+        "avatar": 272579533,
+        "type": "user",
+        "last_seen_on": "2017-05-23 06:23:28",
+        "name": "Ross Cournoyer"
+    },
+    "subscribed": false,
+    "integration": null,
+    "config": {
+        "allow_edit": true,
+        "tasks": [],
+        "yesno": false,
+        "silent_creates": false,
+        "yesno_label": null,
+        "thumbs": false,
+        "app_item_id_padding": 1,
+        "show_app_item_id": true,
+        "default_view": "badge",
+        "allow_tags": false,
+        "item_name": "Test",
+        "allow_attachments": true,
+        "allow_create": true,
+        "app_item_id_prefix": "",
+        "disable_notifications": false,
+        "fivestar": false,
+        "thumbs_label": null,
+        "type": "standard",
+        "rsvp": false,
+        "description": null,
+        "usage": null,
+        "fivestar_label": null,
+        "approved": false,
+        "icon": "194.png",
+        "allow_comments": true,
+        "name": "Placement Tests",
+        "icon_id": 194,
+        "calendar_color_category_field_id": null,
+        "silent_edits": false,
+        "rsvp_label": null,
+        "external_id": null
+    },
+    "status": "active",
+    "default_view_id": null,
+    "link_add": "https://podio.com/learnandleadforlifecom/fall-2017-semester-enrollment/apps/placement-tests/items/new",
+    "mailbox": null,
+    "link": "https://podio.com/learnandleadforlifecom/fall-2017-semester-enrollment/apps/placement-tests",
+    "url_add": "https://podio.com/learnandleadforlifecom/fall-2017-semester-enrollment/apps/placement-tests/items/new",
+    "sharefile_vault_url": null,
+    "original_revision": 21,
+    "rights": [
+        "view_structure",
+        "add_task",
+        "view",
+        "add_hook",
+        "subscribe",
+        "add_item"
+    ],
+    "url": "https://podio.com/learnandleadforlifecom/fall-2017-semester-enrollment/apps/placement-tests",
+    "fields": [
+        {
+            "status": "active",
+            "type": "app",
+            "field_id": 145749336,
+            "label": "Student",
+            "config": {
+                "default_value": null,
+                "unique": false,
+                "description": null,
+                "hidden_create_view_edit": false,
+                "required": false,
+                "mapping": null,
+                "label": "Student",
+                "visible": true,
+                "delta": 0,
+                "hidden": false,
+                "settings": {
+                    "multiple": true,
+                    "referenced_apps": [
+                        {
+                            "view_id": null,
+                            "app": {
+                                "status": "active",
+                                "sharefile_vault_url": null,
+                                "name": "Student Registry",
+                                "rights": [
+                                    "view_structure",
+                                    "add_task",
+                                    "view",
+                                    "add_hook",
+                                    "subscribe",
+                                    "add_item"
+                                ],
+                                "default_view_id": null,
+                                "url_add": "https://podio.com/learnandleadforlifecom/fall-2017-semester-enrollment/apps/student-registry/items/new",
+                                "icon_id": 55,
+                                "space": {
+                                    "sharefile_vault_url": null,
+                                    "name": "2017 Fall Semester Enrollment",
+                                    "url": "https://podio.com/learnandleadforlifecom/fall-2017-semester-enrollment",
+                                    "url_label": "fall-2017-semester-enrollment",
+                                    "space_id": 5175131,
+                                    "org_id": 905302,
+                                    "type": "regular"
+                                },
+                                "link_add": "https://podio.com/learnandleadforlifecom/fall-2017-semester-enrollment/apps/student-registry/items/new",
+                                "app_id": 18489230,
+                                "current_revision": 23,
+                                "item_name": "Student",
+                                "link": "https://podio.com/learnandleadforlifecom/fall-2017-semester-enrollment/apps/student-registry",
+                                "url": "https://podio.com/learnandleadforlifecom/fall-2017-semester-enrollment/apps/student-registry",
+                                "url_label": "student-registry",
+                                "config": {
+                                    "item_name": "Student",
+                                    "icon_id": 55,
+                                    "type": "standard",
+                                    "name": "Student Registry",
+                                    "icon": "55.png"
+                                },
+                                "space_id": 5175131,
+                                "icon": "55.png"
+                            },
+                            "app_id": 18489230,
+                            "view": null
+                        }
+                    ],
+                    "apps": [
+                        {
+                            "status": "active",
+                            "sharefile_vault_url": null,
+                            "name": "Student Registry",
+                            "rights": [
+                                "view_structure",
+                                "add_task",
+                                "view",
+                                "add_hook",
+                                "subscribe",
+                                "add_item"
+                            ],
+                            "default_view_id": null,
+                            "url_add": "https://podio.com/learnandleadforlifecom/fall-2017-semester-enrollment/apps/student-registry/items/new",
+                            "icon_id": 55,
+                            "space": {
+                                "sharefile_vault_url": null,
+                                "name": "2017 Fall Semester Enrollment",
+                                "url": "https://podio.com/learnandleadforlifecom/fall-2017-semester-enrollment",
+                                "url_label": "fall-2017-semester-enrollment",
+                                "space_id": 5175131,
+                                "org_id": 905302,
+                                "type": "regular"
+                            },
+                            "link_add": "https://podio.com/learnandleadforlifecom/fall-2017-semester-enrollment/apps/student-registry/items/new",
+                            "app_id": 18489230,
+                            "current_revision": 23,
+                            "item_name": "Student",
+                            "link": "https://podio.com/learnandleadforlifecom/fall-2017-semester-enrollment/apps/student-registry",
+                            "url": "https://podio.com/learnandleadforlifecom/fall-2017-semester-enrollment/apps/student-registry",
+                            "url_label": "student-registry",
+                            "config": {
+                                "item_name": "Student",
+                                "icon_id": 55,
+                                "type": "standard",
+                                "name": "Student Registry",
+                                "icon": "55.png"
+                            },
+                            "space_id": 5175131,
+                            "icon": "55.png"
+                        }
+                    ],
+                    "referenceable_types": [
+                        18489230
+                    ]
+                }
+            },
+            "external_id": "student"
+        },
+        {
+            "status": "active",
+            "type": "category",
+            "field_id": 146592312,
+            "label": "1) Personal Information.   Please tell us a bit about yourself. If your information is already here, please make sure it is correct.",
+            "config": {
+                "default_value": null,
+                "unique": false,
+                "description": null,
+                "hidden_create_view_edit": false,
+                "required": false,
+                "mapping": null,
+                "label": "1) Personal Information.   Please tell us a bit about yourself. If your information is already here, please make sure it is correct.",
+                "visible": true,
+                "delta": 1,
+                "hidden": false,
+                "settings": {
+                    "multiple": false,
+                    "options": [],
+                    "display": "list"
+                }
+            },
+            "external_id": "1-personal-information-please-tell-us-a-bit-about-yours"
+        },
+        {
+            "status": "deleted",
+            "type": "text",
+            "field_id": 146592324,
+            "label": "Text",
+            "config": {
+                "default_value": null,
+                "unique": false,
+                "description": null,
+                "hidden_create_view_edit": false,
+                "required": false,
+                "mapping": null,
+                "label": "Text",
+                "visible": false,
+                "delta": 1,
+                "hidden": false,
+                "settings": {
+                    "format": "html",
+                    "size": "large"
+                }
+            },
+            "external_id": "text-2"
+        },
+        {
+            "status": "active",
+            "type": "text",
+            "field_id": 145749337,
+            "label": "Student Name",
+            "config": {
+                "default_value": null,
+                "unique": false,
+                "description": null,
+                "hidden_create_view_edit": false,
+                "required": true,
+                "mapping": null,
+                "label": "Student Name",
+                "visible": true,
+                "delta": 2,
+                "hidden": false,
+                "settings": {
+                    "format": "plain",
+                    "size": "small"
+                }
+            },
+            "external_id": "title"
+        },
+        {
+            "status": "active",
+            "type": "text",
+            "field_id": 145749338,
+            "label": "Instructor Name",
+            "config": {
+                "default_value": null,
+                "unique": false,
+                "description": null,
+                "hidden_create_view_edit": false,
+                "required": true,
+                "mapping": null,
+                "label": "Instructor Name",
+                "visible": true,
+                "delta": 3,
+                "hidden": false,
+                "settings": {
+                    "format": "plain",
+                    "size": "small"
+                }
+            },
+            "external_id": "instructor-name"
+        },
+        {
+            "status": "active",
+            "type": "text",
+            "field_id": 145749339,
+            "label": "Parent Name",
+            "config": {
+                "default_value": null,
+                "unique": false,
+                "description": "Get from Parent Info Form",
+                "hidden_create_view_edit": false,
+                "required": true,
+                "mapping": null,
+                "label": "Parent Name",
+                "visible": true,
+                "delta": 4,
+                "hidden": false,
+                "settings": {
+                    "format": "plain",
+                    "size": "small"
+                }
+            },
+            "external_id": "parent-name"
+        },
+        {
+            "status": "active",
+            "type": "text",
+            "field_id": 145749340,
+            "label": "Parent Email",
+            "config": {
+                "default_value": null,
+                "unique": false,
+                "description": null,
+                "hidden_create_view_edit": false,
+                "required": true,
+                "mapping": null,
+                "label": "Parent Email",
+                "visible": true,
+                "delta": 5,
+                "hidden": false,
+                "settings": {
+                    "format": "plain",
+                    "size": "small"
+                }
+            },
+            "external_id": "parent-email"
+        },
+        {
+            "status": "active",
+            "type": "number",
+            "field_id": 145749341,
+            "label": "Student Grade",
+            "config": {
+                "default_value": null,
+                "unique": false,
+                "description": null,
+                "hidden_create_view_edit": false,
+                "required": true,
+                "mapping": null,
+                "label": "Student Grade",
+                "visible": true,
+                "delta": 6,
+                "hidden": false,
+                "settings": {
+                    "decimals": 0
+                }
+            },
+            "external_id": "student-grade"
+        },
+        {
+            "status": "active",
+            "type": "text",
+            "field_id": 145749342,
+            "label": "Student School",
+            "config": {
+                "default_value": null,
+                "unique": false,
+                "description": null,
+                "hidden_create_view_edit": false,
+                "required": true,
+                "mapping": null,
+                "label": "Student School",
+                "visible": true,
+                "delta": 7,
+                "hidden": false,
+                "settings": {
+                    "format": "plain",
+                    "size": "small"
+                }
+            },
+            "external_id": "student-school"
+        },
+        {
+            "status": "active",
+            "type": "number",
+            "field_id": 146808202,
+            "label": "How many debate competitions have you been in?",
+            "config": {
+                "default_value": null,
+                "unique": false,
+                "description": null,
+                "hidden_create_view_edit": false,
+                "required": false,
+                "mapping": null,
+                "label": "How many debate competitions have you been in?",
+                "visible": true,
+                "delta": 8,
+                "hidden": false,
+                "settings": {
+                    "decimals": 0
+                }
+            },
+            "external_id": "how-many-debate-competitions-have-you-been-in"
+        },
+        {
+            "status": "active",
+            "type": "category",
+            "field_id": 146592354,
+            "label": "2) Competitions. We want to know about your experience in debate competitions. If you have not been to any debate competitions it is no problem! LearningLeaders coaches will help you prepare for your first competition! ",
+            "config": {
+                "default_value": null,
+                "unique": false,
+                "description": null,
+                "hidden_create_view_edit": false,
+                "required": false,
+                "mapping": null,
+                "label": "2) Competitions. We want to know about your experience in debate competitions. If you have not been to any debate competitions it is no problem! LearningLeaders coaches will help you prepare for your first competition! ",
+                "visible": true,
+                "delta": 9,
+                "hidden": false,
+                "settings": {
+                    "multiple": false,
+                    "options": [],
+                    "display": "list"
+                }
+            },
+            "external_id": "2-competition-experience-we-want-to-know-about-your-exp"
+        },
+        {
+            "status": "active",
+            "type": "category",
+            "field_id": 146592535,
+            "label": "If you have competed in a debate competition before, tell us about your most recent experiences. We are interested to know:",
+            "config": {
+                "default_value": null,
+                "unique": false,
+                "description": null,
+                "hidden_create_view_edit": false,
+                "required": false,
+                "mapping": null,
+                "label": "If you have competed in a debate competition before, tell us about your most recent experiences. We are interested to know:",
+                "visible": true,
+                "delta": 10,
+                "hidden": false,
+                "settings": {
+                    "multiple": false,
+                    "options": [],
+                    "display": "list"
+                }
+            },
+            "external_id": "if-you-have-competed-in-a-debate-competition-before-tel"
+        },
+        {
+            "status": "active",
+            "type": "category",
+            "field_id": 146592536,
+            "label": "A) Competition name (e.g. NSDA, NHSDLC, Berkeley, China BP, etc.)",
+            "config": {
+                "default_value": null,
+                "unique": false,
+                "description": null,
+                "hidden_create_view_edit": false,
+                "required": false,
+                "mapping": null,
+                "label": "A) Competition name (e.g. NSDA, NHSDLC, Berkeley, China BP, etc.)",
+                "visible": true,
+                "delta": 11,
+                "hidden": false,
+                "settings": {
+                    "multiple": false,
+                    "options": [],
+                    "display": "list"
+                }
+            },
+            "external_id": "a-competition-name-eg-nsda-nhsdlc-berkeley-china-bp-etc"
+        },
+        {
+            "status": "active",
+            "type": "category",
+            "field_id": 146592537,
+            "label": "B) Format (e.g. Public Forum, World Schools, BP)",
+            "config": {
+                "default_value": null,
+                "unique": false,
+                "description": null,
+                "hidden_create_view_edit": false,
+                "required": false,
+                "mapping": null,
+                "label": "B) Format (e.g. Public Forum, World Schools, BP)",
+                "visible": true,
+                "delta": 12,
+                "hidden": false,
+                "settings": {
+                    "multiple": false,
+                    "options": [],
+                    "display": "list"
+                }
+            },
+            "external_id": "b-format-eg-public-forum-world-schools-bp"
+        },
+        {
+            "status": "active",
+            "type": "category",
+            "field_id": 146593513,
+            "label": "C)\tWhat topic or topics did you debate?",
+            "config": {
+                "default_value": null,
+                "unique": false,
+                "description": null,
+                "hidden_create_view_edit": false,
+                "required": false,
+                "mapping": null,
+                "label": "C)\tWhat topic or topics did you debate?",
+                "visible": true,
+                "delta": 13,
+                "hidden": false,
+                "settings": {
+                    "multiple": false,
+                    "options": [],
+                    "display": "list"
+                }
+            },
+            "external_id": "cwhat-topic-or-topics-did-you-debate"
+        },
+        {
+            "status": "deleted",
+            "type": "number",
+            "field_id": 145749343,
+            "label": "How many debate competitions have you been in?",
+            "config": {
+                "default_value": null,
+                "unique": false,
+                "description": null,
+                "hidden_create_view_edit": false,
+                "required": false,
+                "mapping": null,
+                "label": "How many debate competitions have you been in?",
+                "visible": false,
+                "delta": 13,
+                "hidden": false,
+                "settings": {
+                    "decimals": 0
+                }
+            },
+            "external_id": "num-of-debate-competitions"
+        },
+        {
+            "status": "active",
+            "type": "category",
+            "field_id": 146593514,
+            "label": "D)\tWhat awards did you receive?",
+            "config": {
+                "default_value": null,
+                "unique": false,
+                "description": null,
+                "hidden_create_view_edit": false,
+                "required": false,
+                "mapping": null,
+                "label": "D)\tWhat awards did you receive?",
+                "visible": true,
+                "delta": 14,
+                "hidden": false,
+                "settings": {
+                    "multiple": false,
+                    "options": [],
+                    "display": "list"
+                }
+            },
+            "external_id": "dwhat-awards-did-you-receive"
+        },
+        {
+            "status": "deleted",
+            "type": "image",
+            "field_id": 146592326,
+            "label": "Image",
+            "config": {
+                "default_value": null,
+                "unique": false,
+                "description": "Supported image types: .jpg .gif .png",
+                "hidden_create_view_edit": false,
+                "required": false,
+                "mapping": null,
+                "label": "Image",
+                "visible": false,
+                "delta": 14,
+                "hidden": false,
+                "settings": {
+                    "allowed_mimetypes": [
+                        "image/png"
+                    ]
+                }
+            },
+            "external_id": "image-2"
+        },
+        {
+            "status": "active",
+            "type": "text",
+            "field_id": 145749344,
+            "label": "Please answer here",
+            "config": {
+                "default_value": null,
+                "unique": false,
+                "description": null,
+                "hidden_create_view_edit": false,
+                "required": false,
+                "mapping": null,
+                "label": "Please answer here",
+                "visible": true,
+                "delta": 15,
+                "hidden": false,
+                "settings": {
+                    "format": "html",
+                    "size": "large"
+                }
+            },
+            "external_id": "competition-1-info"
+        },
+        {
+            "status": "active",
+            "type": "category",
+            "field_id": 145749346,
+            "label": "Debate Experience",
+            "config": {
+                "default_value": null,
+                "unique": false,
+                "description": "0 – No competitions\n\n1 – 1 competition. NSDA/NHSDLC/BP. Model UN and World Scholars Cup do not count.\n\n2 – 2 or more competitions.  4+ rounds Model UN and World Scholars Cup do not count.\n",
+                "hidden_create_view_edit": false,
+                "required": false,
+                "mapping": null,
+                "label": "Debate Experience",
+                "visible": true,
+                "delta": 16,
+                "hidden": false,
+                "settings": {
+                    "multiple": false,
+                    "options": [
+                        {
+                            "status": "active",
+                            "text": "0",
+                            "id": 1,
+                            "color": "F7D1D0"
+                        },
+                        {
+                            "status": "active",
+                            "text": "1",
+                            "id": 2,
+                            "color": "F7F0C5"
+                        },
+                        {
+                            "status": "active",
+                            "text": "2",
+                            "id": 3,
+                            "color": "DCEBD8"
+                        }
+                    ],
+                    "display": "inline"
+                }
+            },
+            "external_id": "debate-xp"
+        },
+        {
+            "status": "deleted",
+            "type": "text",
+            "field_id": 145749345,
+            "label": "If applicable, tell us about another recent tournament experience? Name of competition? (e.g. NSDA, China BP) What format? (e.g. Public Forum, BP) Topic? (e.g. immigration, nuclear weapons) Awards Recieved? (e.g. top 32, top 16 etc.)",
+            "config": {
+                "default_value": null,
+                "unique": false,
+                "description": null,
+                "hidden_create_view_edit": false,
+                "required": false,
+                "mapping": null,
+                "label": "If applicable, tell us about another recent tournament experience? Name of competition? (e.g. NSDA, China BP) What format? (e.g. Public Forum, BP) Topic? (e.g. immigration, nuclear weapons) Awards Recieved? (e.g. top 32, top 16 etc.)",
+                "visible": false,
+                "delta": 16,
+                "hidden": false,
+                "settings": {
+                    "format": "html",
+                    "size": "large"
+                }
+            },
+            "external_id": "competition-2-info"
+        },
+        {
+            "status": "active",
+            "type": "category",
+            "field_id": 146593515,
+            "label": "3) Classes. We want to know about your experience in debate and/or public speaking classes. If you have not been to any debate or public speaking classes don’t worry! A journey of a thousand miles begins with a single step!",
+            "config": {
+                "default_value": null,
+                "unique": false,
+                "description": null,
+                "hidden_create_view_edit": false,
+                "required": false,
+                "mapping": null,
+                "label": "3) Classes. We want to know about your experience in debate and/or public speaking classes. If you have not been to any debate or public speaking classes don’t worry! A journey of a thousand miles begins with a single step!",
+                "visible": true,
+                "delta": 17,
+                "hidden": false,
+                "settings": {
+                    "multiple": false,
+                    "options": [],
+                    "display": "list"
+                }
+            },
+            "external_id": "we-want-to-know-about-your-experience-in-debate-andor-p"
+        },
+        {
+            "status": "active",
+            "type": "number",
+            "field_id": 145749347,
+            "label": "How many debate classes have you taken?",
+            "config": {
+                "default_value": null,
+                "unique": false,
+                "description": null,
+                "hidden_create_view_edit": false,
+                "required": false,
+                "mapping": null,
+                "label": "How many debate classes have you taken?",
+                "visible": true,
+                "delta": 18,
+                "hidden": false,
+                "settings": {
+                    "decimals": 0
+                }
+            },
+            "external_id": "num-of-debate-classes"
+        },
+        {
+            "status": "active",
+            "type": "number",
+            "field_id": 146593516,
+            "label": "How many public speaking classes have you taken?",
+            "config": {
+                "default_value": null,
+                "unique": false,
+                "description": null,
+                "hidden_create_view_edit": false,
+                "required": false,
+                "mapping": null,
+                "label": "How many public speaking classes have you taken?",
+                "visible": true,
+                "delta": 19,
+                "hidden": false,
+                "settings": {
+                    "decimals": 0
+                }
+            },
+            "external_id": "how-many-public-speaking-classes-have-you-taken"
+        },
+        {
+            "status": "active",
+            "type": "category",
+            "field_id": 146593517,
+            "label": "If you have taken a debate and/or public speaking class we want to know more! Tell us about your most recent classes. We are interested to know:",
+            "config": {
+                "default_value": null,
+                "unique": false,
+                "description": null,
+                "hidden_create_view_edit": false,
+                "required": false,
+                "mapping": null,
+                "label": "If you have taken a debate and/or public speaking class we want to know more! Tell us about your most recent classes. We are interested to know:",
+                "visible": true,
+                "delta": 20,
+                "hidden": false,
+                "settings": {
+                    "multiple": false,
+                    "options": [],
+                    "display": "list"
+                }
+            },
+            "external_id": "if-you-have-taken-a-debate-andor-public-speaking-class-"
+        },
+        {
+            "status": "deleted",
+            "type": "text",
+            "field_id": 145749349,
+            "label": "If applicable, please tell us about another recent class. What school you have class with? (e.g. Enreach, Kudos, etc.) What level? (e.g. Intro, Advanced etc.) How  debates were there? What format? (e.g. Public Forum, BP etc.)",
+            "config": {
+                "default_value": null,
+                "unique": false,
+                "description": null,
+                "hidden_create_view_edit": false,
+                "required": false,
+                "mapping": null,
+                "label": "If applicable, please tell us about another recent class. What school you have class with? (e.g. Enreach, Kudos, etc.) What level? (e.g. Intro, Advanced etc.) How  debates were there? What format? (e.g. Public Forum, BP etc.)",
+                "visible": false,
+                "delta": 20,
+                "hidden": false,
+                "settings": {
+                    "format": "html",
+                    "size": "large"
+                }
+            },
+            "external_id": "class-2-info"
+        },
+        {
+            "status": "active",
+            "type": "category",
+            "field_id": 146593518,
+            "label": "A)\tSchool or organization (e.g. Enreach, Kudos, Michigan State University Debate Camp, any other summer camp, etc.)",
+            "config": {
+                "default_value": null,
+                "unique": false,
+                "description": null,
+                "hidden_create_view_edit": false,
+                "required": false,
+                "mapping": null,
+                "label": "A)\tSchool or organization (e.g. Enreach, Kudos, Michigan State University Debate Camp, any other summer camp, etc.)",
+                "visible": true,
+                "delta": 21,
+                "hidden": false,
+                "settings": {
+                    "multiple": false,
+                    "options": [],
+                    "display": "list"
+                }
+            },
+            "external_id": "aschool-or-organization-eg-enreach-kudos-michigan-state"
+        },
+        {
+            "status": "active",
+            "type": "category",
+            "field_id": 146593519,
+            "label": "B)\tClass level (e.g. beginner, intermediate, advanced)",
+            "config": {
+                "default_value": null,
+                "unique": false,
+                "description": null,
+                "hidden_create_view_edit": false,
+                "required": false,
+                "mapping": null,
+                "label": "B)\tClass level (e.g. beginner, intermediate, advanced)",
+                "visible": true,
+                "delta": 22,
+                "hidden": false,
+                "settings": {
+                    "multiple": false,
+                    "options": [],
+                    "display": "list"
+                }
+            },
+            "external_id": "bclass-level-eg-beginner-intermediate-advanced"
+        },
+        {
+            "status": "active",
+            "type": "category",
+            "field_id": 146593520,
+            "label": "C)\tDebate or Speech format (e.g. Public Forum, BP, Original Oratory, Impromptu, etc.)",
+            "config": {
+                "default_value": null,
+                "unique": false,
+                "description": null,
+                "hidden_create_view_edit": false,
+                "required": false,
+                "mapping": null,
+                "label": "C)\tDebate or Speech format (e.g. Public Forum, BP, Original Oratory, Impromptu, etc.)",
+                "visible": true,
+                "delta": 23,
+                "hidden": false,
+                "settings": {
+                    "multiple": false,
+                    "options": [],
+                    "display": "list"
+                }
+            },
+            "external_id": "cdebate-or-speech-format-eg-public-forum-bp-original-or"
+        },
+        {
+            "status": "active",
+            "type": "text",
+            "field_id": 145749348,
+            "label": "Please answer here:",
+            "config": {
+                "default_value": null,
+                "unique": false,
+                "description": null,
+                "hidden_create_view_edit": false,
+                "required": false,
+                "mapping": null,
+                "label": "Please answer here:",
+                "visible": true,
+                "delta": 24,
+                "hidden": false,
+                "settings": {
+                    "format": "html",
+                    "size": "large"
+                }
+            },
+            "external_id": "class-1-info"
+        },
+        {
+            "status": "active",
+            "type": "category",
+            "field_id": 145749350,
+            "label": "Class Experience",
+            "config": {
+                "default_value": null,
+                "unique": false,
+                "description": "0 – No previous classes\n\n1 – Simple debate intro class. Less than 4 weeks. Would include summer camp course.\n\n2 – 1 or more significant class experience. More than 4 weeks course.  \n",
+                "hidden_create_view_edit": false,
+                "required": false,
+                "mapping": null,
+                "label": "Class Experience",
+                "visible": true,
+                "delta": 25,
+                "hidden": false,
+                "settings": {
+                    "multiple": false,
+                    "options": [
+                        {
+                            "status": "active",
+                            "text": "0",
+                            "id": 1,
+                            "color": "F7D1D0"
+                        },
+                        {
+                            "status": "active",
+                            "text": "1",
+                            "id": 2,
+                            "color": "F7F0C5"
+                        },
+                        {
+                            "status": "active",
+                            "text": "2",
+                            "id": 3,
+                            "color": "DCEBD8"
+                        }
+                    ],
+                    "display": "inline"
+                }
+            },
+            "external_id": "class-xp"
+        },
+        {
+            "status": "active",
+            "type": "category",
+            "field_id": 146666989,
+            "label": "4) Argumentation.",
+            "config": {
+                "default_value": null,
+                "unique": false,
+                "description": null,
+                "hidden_create_view_edit": false,
+                "required": false,
+                "mapping": null,
+                "label": "4) Argumentation.",
+                "visible": true,
+                "delta": 26,
+                "hidden": false,
+                "settings": {
+                    "multiple": false,
+                    "options": [],
+                    "display": "list"
+                }
+            },
+            "external_id": "4-argumentation"
+        },
+        {
+            "status": "deleted",
+            "type": "text",
+            "field_id": 145749351,
+            "label": "Consider this topic: Students should not be forced to study a foreign language in school. Now provide one argument in support. Remember, an argument is a claim supported by reasoning, evidence and examples.",
+            "config": {
+                "default_value": null,
+                "unique": false,
+                "description": null,
+                "hidden_create_view_edit": false,
+                "required": false,
+                "mapping": null,
+                "label": "Consider this topic: Students should not be forced to study a foreign language in school. Now provide one argument in support. Remember, an argument is a claim supported by reasoning, evidence and examples.",
+                "visible": false,
+                "delta": 26,
+                "hidden": false,
+                "settings": {
+                    "format": "html",
+                    "size": "large"
+                }
+            },
+            "external_id": "arg-in-support-1"
+        },
+        {
+            "status": "active",
+            "type": "category",
+            "field_id": 146666990,
+            "label": "We want to see how well you can make and argument for and against a given topic. We will give you a debate topic and ask you to develop TWO different arguments to support a topic and TWO different arguments to oppose a topic. ",
+            "config": {
+                "default_value": null,
+                "unique": false,
+                "description": null,
+                "hidden_create_view_edit": false,
+                "required": false,
+                "mapping": null,
+                "label": "We want to see how well you can make and argument for and against a given topic. We will give you a debate topic and ask you to develop TWO different arguments to support a topic and TWO different arguments to oppose a topic. ",
+                "visible": true,
+                "delta": 27,
+                "hidden": false,
+                "settings": {
+                    "multiple": false,
+                    "options": [],
+                    "display": "list"
+                }
+            },
+            "external_id": "we-want-to-see-how-well-you-can-make-and-argument-for-a"
+        },
+        {
+            "status": "deleted",
+            "type": "text",
+            "field_id": 145749352,
+            "label": "Please provide another argument in support, with claim, reasoning, and evidence.",
+            "config": {
+                "default_value": null,
+                "unique": false,
+                "description": null,
+                "hidden_create_view_edit": false,
+                "required": false,
+                "mapping": null,
+                "label": "Please provide another argument in support, with claim, reasoning, and evidence.",
+                "visible": false,
+                "delta": 27,
+                "hidden": false,
+                "settings": {
+                    "format": "html",
+                    "size": "large"
+                }
+            },
+            "external_id": "arg-in-support-2"
+        },
+        {
+            "status": "active",
+            "type": "category",
+            "field_id": 146666991,
+            "label": "Remember. Your arguments for each side should be:",
+            "config": {
+                "default_value": null,
+                "unique": false,
+                "description": null,
+                "hidden_create_view_edit": false,
+                "required": false,
+                "mapping": null,
+                "label": "Remember. Your arguments for each side should be:",
+                "visible": true,
+                "delta": 28,
+                "hidden": false,
+                "settings": {
+                    "multiple": false,
+                    "options": [],
+                    "display": "list"
+                }
+            },
+            "external_id": "remember-your-arguments-for-each-side-should-be"
+        },
+        {
+            "status": "deleted",
+            "type": "text",
+            "field_id": 145749353,
+            "label": "Please provide an argument in opposition to the topic, also with claim, reasoning and evidence/examples.",
+            "config": {
+                "default_value": null,
+                "unique": false,
+                "description": null,
+                "hidden_create_view_edit": false,
+                "required": false,
+                "mapping": null,
+                "label": "Please provide an argument in opposition to the topic, also with claim, reasoning and evidence/examples.",
+                "visible": false,
+                "delta": 28,
+                "hidden": false,
+                "settings": {
+                    "format": "html",
+                    "size": "large"
+                }
+            },
+            "external_id": "arg-against-1"
+        },
+        {
+            "status": "active",
+            "type": "category",
+            "field_id": 146666992,
+            "label": "A) Distinct",
+            "config": {
+                "default_value": null,
+                "unique": false,
+                "description": null,
+                "hidden_create_view_edit": false,
+                "required": false,
+                "mapping": null,
+                "label": "A) Distinct",
+                "visible": true,
+                "delta": 29,
+                "hidden": false,
+                "settings": {
+                    "multiple": false,
+                    "options": [],
+                    "display": "list"
+                }
+            },
+            "external_id": "a-distinct"
+        },
+        {
+            "status": "deleted",
+            "type": "text",
+            "field_id": 145749354,
+            "label": "Please provide another argument in opposition to the topic, also with claim, reasoning and evidence/examples.",
+            "config": {
+                "default_value": null,
+                "unique": false,
+                "description": null,
+                "hidden_create_view_edit": false,
+                "required": false,
+                "mapping": null,
+                "label": "Please provide another argument in opposition to the topic, also with claim, reasoning and evidence/examples.",
+                "visible": false,
+                "delta": 29,
+                "hidden": false,
+                "settings": {
+                    "format": "html",
+                    "size": "large"
+                }
+            },
+            "external_id": "arg-against-2"
+        },
+        {
+            "status": "active",
+            "type": "category",
+            "field_id": 146666993,
+            "label": "B) Supported with reasoning",
+            "config": {
+                "default_value": null,
+                "unique": false,
+                "description": null,
+                "hidden_create_view_edit": false,
+                "required": false,
+                "mapping": null,
+                "label": "B) Supported with reasoning",
+                "visible": true,
+                "delta": 30,
+                "hidden": false,
+                "settings": {
+                    "multiple": false,
+                    "options": [],
+                    "display": "list"
+                }
+            },
+            "external_id": "b-supported-with-reasoning"
+        },
+        {
+            "status": "active",
+            "type": "category",
+            "field_id": 146666994,
+            "label": "C) Supported by evidence and examples",
+            "config": {
+                "default_value": null,
+                "unique": false,
+                "description": null,
+                "hidden_create_view_edit": false,
+                "required": false,
+                "mapping": null,
+                "label": "C) Supported by evidence and examples",
+                "visible": true,
+                "delta": 31,
+                "hidden": false,
+                "settings": {
+                    "multiple": false,
+                    "options": [],
+                    "display": "list"
+                }
+            },
+            "external_id": "c-supported-by-evidence-and-examples"
+        },
+        {
+            "status": "active",
+            "type": "category",
+            "field_id": 146666995,
+            "label": "Consider the following topic:",
+            "config": {
+                "default_value": null,
+                "unique": false,
+                "description": null,
+                "hidden_create_view_edit": false,
+                "required": false,
+                "mapping": null,
+                "label": "Consider the following topic:",
+                "visible": true,
+                "delta": 32,
+                "hidden": false,
+                "settings": {
+                    "multiple": false,
+                    "options": [],
+                    "display": "list"
+                }
+            },
+            "external_id": "consider-the-following-topic"
+        },
+        {
+            "status": "deleted",
+            "type": "text",
+            "field_id": 145749356,
+            "label": "Watch a short video of a LearningLeaders coach delivering an argument. In this space, summarize the argument.",
+            "config": {
+                "default_value": null,
+                "unique": false,
+                "description": null,
+                "hidden_create_view_edit": false,
+                "required": false,
+                "mapping": null,
+                "label": "Watch a short video of a LearningLeaders coach delivering an argument. In this space, summarize the argument.",
+                "visible": false,
+                "delta": 32,
+                "hidden": false,
+                "settings": {
+                    "format": "html",
+                    "size": "large"
+                }
+            },
+            "external_id": "summary-of-argument"
+        },
+        {
+            "status": "active",
+            "type": "category",
+            "field_id": 146666996,
+            "label": "RESOLVED: STUDENTS SHOULD NOT BE FORCED TO STUDY A FOREIGN LANGUAGE IN MIDDLE SCHOOL",
+            "config": {
+                "default_value": null,
+                "unique": false,
+                "description": null,
+                "hidden_create_view_edit": false,
+                "required": false,
+                "mapping": null,
+                "label": "RESOLVED: STUDENTS SHOULD NOT BE FORCED TO STUDY A FOREIGN LANGUAGE IN MIDDLE SCHOOL",
+                "visible": true,
+                "delta": 33,
+                "hidden": false,
+                "settings": {
+                    "multiple": false,
+                    "options": [],
+                    "display": "list"
+                }
+            },
+            "external_id": "resolved-students-should-not-be-forced-to-study-a-forei"
+        },
+        {
+            "status": "deleted",
+            "type": "text",
+            "field_id": 145749357,
+            "label": "In this space, provide a refutation to the argument. A refutation is a direct response to an opponent's arguments. Try your best to make a specific and direct refutation rather than introducing a new, unrelated argument.",
+            "config": {
+                "default_value": null,
+                "unique": false,
+                "description": null,
+                "hidden_create_view_edit": false,
+                "required": false,
+                "mapping": null,
+                "label": "In this space, provide a refutation to the argument. A refutation is a direct response to an opponent's arguments. Try your best to make a specific and direct refutation rather than introducing a new, unrelated argument.",
+                "visible": false,
+                "delta": 33,
+                "hidden": false,
+                "settings": {
+                    "format": "html",
+                    "size": "large"
+                }
+            },
+            "external_id": "refutation-of-argument"
+        },
+        {
+            "status": "active",
+            "type": "text",
+            "field_id": 146666997,
+            "label": " Give your first argument for why students should NOT be forced to study a foreign language in middle school here:",
+            "config": {
+                "default_value": null,
+                "unique": false,
+                "description": null,
+                "hidden_create_view_edit": false,
+                "required": false,
+                "mapping": null,
+                "label": " Give your first argument for why students should NOT be forced to study a foreign language in middle school here:",
+                "visible": true,
+                "delta": 34,
+                "hidden": false,
+                "settings": {
+                    "format": "html",
+                    "size": "large"
+                }
+            },
+            "external_id": "give-your-first-argument-for-why-students-should-not-be"
+        },
+        {
+            "status": "active",
+            "type": "text",
+            "field_id": 146666998,
+            "label": "Give your second argument for why students should NOT be forced to study a foreign language in middle school here:",
+            "config": {
+                "default_value": null,
+                "unique": false,
+                "description": null,
+                "hidden_create_view_edit": false,
+                "required": false,
+                "mapping": null,
+                "label": "Give your second argument for why students should NOT be forced to study a foreign language in middle school here:",
+                "visible": true,
+                "delta": 35,
+                "hidden": false,
+                "settings": {
+                    "format": "html",
+                    "size": "large"
+                }
+            },
+            "external_id": "give-your-second-argument-for-why-students-should-not-b"
+        },
+        {
+            "status": "deleted",
+            "type": "text",
+            "field_id": 145749359,
+            "label": "Imagine you are organizing a debate competition, and you get to choose three debate topics. You want to choose unique topics that reflect current events and controversies of today. Write the first one below.",
+            "config": {
+                "default_value": null,
+                "unique": false,
+                "description": null,
+                "hidden_create_view_edit": false,
+                "required": false,
+                "mapping": null,
+                "label": "Imagine you are organizing a debate competition, and you get to choose three debate topics. You want to choose unique topics that reflect current events and controversies of today. Write the first one below.",
+                "visible": false,
+                "delta": 35,
+                "hidden": false,
+                "settings": {
+                    "format": "plain",
+                    "size": "small"
+                }
+            },
+            "external_id": "debate-topic-1"
+        },
+        {
+            "status": "active",
+            "type": "text",
+            "field_id": 146666999,
+            "label": "Give your first argument for why students SHOULD be forced to study a foreign language in middle school here:",
+            "config": {
+                "default_value": null,
+                "unique": false,
+                "description": null,
+                "hidden_create_view_edit": false,
+                "required": false,
+                "mapping": null,
+                "label": "Give your first argument for why students SHOULD be forced to study a foreign language in middle school here:",
+                "visible": true,
+                "delta": 36,
+                "hidden": false,
+                "settings": {
+                    "format": "html",
+                    "size": "large"
+                }
+            },
+            "external_id": "give-your-first-argument-for-why-students-should-be-for"
+        },
+        {
+            "status": "deleted",
+            "type": "category",
+            "field_id": 145749372,
+            "label": "Email Placement Results",
+            "config": {
+                "default_value": null,
+                "unique": false,
+                "description": "If candidate is eligible for Advanced or Persuasive, but has scored 2 in all categories choose Elite!",
+                "hidden_create_view_edit": false,
+                "required": false,
+                "mapping": null,
+                "label": "Email Placement Results",
+                "visible": false,
+                "delta": 36,
+                "hidden": false,
+                "settings": {
+                    "multiple": false,
+                    "options": [
+                        {
+                            "status": "active",
+                            "text": "Send (Standard)",
+                            "id": 1,
+                            "color": "DCEBD8"
+                        },
+                        {
+                            "status": "active",
+                            "text": "Send (Elite)",
+                            "id": 2,
+                            "color": "DCEBD8"
+                        }
+                    ],
+                    "display": "inline"
+                }
+            },
+            "external_id": "email-placement-results"
+        },
+        {
+            "status": "deleted",
+            "type": "text",
+            "field_id": 145749360,
+            "label": "Write the second one here.",
+            "config": {
+                "default_value": null,
+                "unique": false,
+                "description": null,
+                "hidden_create_view_edit": false,
+                "required": false,
+                "mapping": null,
+                "label": "Write the second one here.",
+                "visible": false,
+                "delta": 36,
+                "hidden": false,
+                "settings": {
+                    "format": "plain",
+                    "size": "small"
+                }
+            },
+            "external_id": "debate-topic-2"
+        },
+        {
+            "status": "active",
+            "type": "text",
+            "field_id": 146667000,
+            "label": "Give your SECOND argument for why students SHOULD be forced to study a foreign language in middle school here:",
+            "config": {
+                "default_value": null,
+                "unique": false,
+                "description": null,
+                "hidden_create_view_edit": false,
+                "required": false,
+                "mapping": null,
+                "label": "Give your SECOND argument for why students SHOULD be forced to study a foreign language in middle school here:",
+                "visible": true,
+                "delta": 37,
+                "hidden": false,
+                "settings": {
+                    "format": "html",
+                    "size": "large"
+                }
+            },
+            "external_id": "give-your-second-argument-for-why-students-should-be-fo"
+        },
+        {
+            "status": "deleted",
+            "type": "text",
+            "field_id": 145749361,
+            "label": "Write the third one here.",
+            "config": {
+                "default_value": null,
+                "unique": false,
+                "description": null,
+                "hidden_create_view_edit": false,
+                "required": false,
+                "mapping": null,
+                "label": "Write the third one here.",
+                "visible": false,
+                "delta": 37,
+                "hidden": false,
+                "settings": {
+                    "format": "plain",
+                    "size": "small"
+                }
+            },
+            "external_id": "debate-topic-3"
+        },
+        {
+            "status": "active",
+            "type": "category",
+            "field_id": 145749355,
+            "label": "Argument Score",
+            "config": {
+                "default_value": null,
+                "unique": false,
+                "description": "0 – Irrelevant, incoherent assertions, not supported with reasoning, evidence or examples.\n\n1 – Relevant, coherent, differentiated, assertions but not every assertion is supported by reasoning, evidence or examples.\n\n2 – Relevant, coherent, differentiated, assertions with supporting  reasoning, evidence or examples.\n",
+                "hidden_create_view_edit": false,
+                "required": false,
+                "mapping": null,
+                "label": "Argument Score",
+                "visible": true,
+                "delta": 38,
+                "hidden": false,
+                "settings": {
+                    "multiple": false,
+                    "options": [
+                        {
+                            "status": "active",
+                            "text": "0",
+                            "id": 1,
+                            "color": "F7D1D0"
+                        },
+                        {
+                            "status": "active",
+                            "text": "1",
+                            "id": 2,
+                            "color": "F7F0C5"
+                        },
+                        {
+                            "status": "active",
+                            "text": "2",
+                            "id": 3,
+                            "color": "DCEBD8"
+                        }
+                    ],
+                    "display": "inline"
+                }
+            },
+            "external_id": "argument-score"
+        },
+        {
+            "status": "deleted",
+            "type": "text",
+            "field_id": 145749362,
+            "label": "In the past year there have been several terrorist attacks around the world in cities like Paris, Brussels, New York. What do you think is the best way to eliminate terrorist attacks? Why?",
+            "config": {
+                "default_value": null,
+                "unique": false,
+                "description": null,
+                "hidden_create_view_edit": false,
+                "required": false,
+                "mapping": null,
+                "label": "In the past year there have been several terrorist attacks around the world in cities like Paris, Brussels, New York. What do you think is the best way to eliminate terrorist attacks? Why?",
+                "visible": false,
+                "delta": 38,
+                "hidden": false,
+                "settings": {
+                    "format": "html",
+                    "size": "large"
+                }
+            },
+            "external_id": "key-events-terrorism"
+        },
+        {
+            "status": "active",
+            "type": "category",
+            "field_id": 146667001,
+            "label": "5) Refutation.",
+            "config": {
+                "default_value": null,
+                "unique": false,
+                "description": null,
+                "hidden_create_view_edit": false,
+                "required": false,
+                "mapping": null,
+                "label": "5) Refutation.",
+                "visible": true,
+                "delta": 39,
+                "hidden": false,
+                "settings": {
+                    "multiple": false,
+                    "options": [],
+                    "display": "list"
+                }
+            },
+            "external_id": "5-refutation"
+        },
+        {
+            "status": "deleted",
+            "type": "text",
+            "field_id": 145749363,
+            "label": "What is your assessment of the Donald Trump presidency so far? What do you see as the key successes and failures of the Trump administration so far?",
+            "config": {
+                "default_value": null,
+                "unique": false,
+                "description": null,
+                "hidden_create_view_edit": false,
+                "required": false,
+                "mapping": null,
+                "label": "What is your assessment of the Donald Trump presidency so far? What do you see as the key successes and failures of the Trump administration so far?",
+                "visible": false,
+                "delta": 39,
+                "hidden": false,
+                "settings": {
+                    "format": "html",
+                    "size": "large"
+                }
+            },
+            "external_id": "key-events-election"
+        },
+        {
+            "status": "active",
+            "type": "category",
+            "field_id": 146667002,
+            "label": "One of the most challenging and FUN things about debate is that you get are required to respond to what other people are saying and explain why they are wrong. This is called refutation.",
+            "config": {
+                "default_value": null,
+                "unique": false,
+                "description": null,
+                "hidden_create_view_edit": false,
+                "required": false,
+                "mapping": null,
+                "label": "One of the most challenging and FUN things about debate is that you get are required to respond to what other people are saying and explain why they are wrong. This is called refutation.",
+                "visible": true,
+                "delta": 40,
+                "hidden": false,
+                "settings": {
+                    "multiple": false,
+                    "options": [],
+                    "display": "list"
+                }
+            },
+            "external_id": "one-of-the-most-challenging-and-fun-things-about-debate"
+        },
+        {
+            "status": "deleted",
+            "type": "text",
+            "field_id": 145749364,
+            "label": "Tensions between the U.S. and North Korea have been escalating. How do you think the international community should handle this situation?",
+            "config": {
+                "default_value": null,
+                "unique": false,
+                "description": null,
+                "hidden_create_view_edit": false,
+                "required": false,
+                "mapping": null,
+                "label": "Tensions between the U.S. and North Korea have been escalating. How do you think the international community should handle this situation?",
+                "visible": false,
+                "delta": 40,
+                "hidden": false,
+                "settings": {
+                    "format": "html",
+                    "size": "large"
+                }
+            },
+            "external_id": "key-events-brexit"
+        },
+        {
+            "status": "active",
+            "type": "category",
+            "field_id": 146667003,
+            "label": "We want to give you a chance here to listen to an argument from a LearningLeaders coach and explain why they are wrong! ",
+            "config": {
+                "default_value": null,
+                "unique": false,
+                "description": null,
+                "hidden_create_view_edit": false,
+                "required": false,
+                "mapping": null,
+                "label": "We want to give you a chance here to listen to an argument from a LearningLeaders coach and explain why they are wrong! ",
+                "visible": true,
+                "delta": 41,
+                "hidden": false,
+                "settings": {
+                    "multiple": false,
+                    "options": [],
+                    "display": "list"
+                }
+            },
+            "external_id": "we-want-to-give-you-a-chance-here-to-listen-to-an-argum"
+        },
+        {
+            "status": "active",
+            "type": "category",
+            "field_id": 146667004,
+            "label": "In the first box you will simply provide a brief summary of the argument made by the coach and in the second box you will provide reasons for why the coach’s argument is wrong. Try to do your best to respond directly to the argument being made.",
+            "config": {
+                "default_value": null,
+                "unique": false,
+                "description": null,
+                "hidden_create_view_edit": false,
+                "required": false,
+                "mapping": null,
+                "label": "In the first box you will simply provide a brief summary of the argument made by the coach and in the second box you will provide reasons for why the coach’s argument is wrong. Try to do your best to respond directly to the argument being made.",
+                "visible": true,
+                "delta": 42,
+                "hidden": false,
+                "settings": {
+                    "multiple": false,
+                    "options": [],
+                    "display": "list"
+                }
+            },
+            "external_id": "in-the-first-box-you-will-simply-provide-a-brief-summar"
+        },
+        {
+            "status": "active",
+            "type": "category",
+            "field_id": 146155300,
+            "label": "Watch this video: http://learningleaders.com/placement/ ",
+            "config": {
+                "default_value": null,
+                "unique": false,
+                "description": null,
+                "hidden_create_view_edit": false,
+                "required": false,
+                "mapping": null,
+                "label": "Watch this video: http://learningleaders.com/placement/ ",
+                "visible": true,
+                "delta": 43,
+                "hidden": false,
+                "settings": {
+                    "multiple": false,
+                    "options": [],
+                    "display": "list"
+                }
+            },
+            "external_id": "watch-this-video-httpplayerpolyvnetvideosplayerswfvid3e"
+        },
+        {
+            "status": "active",
+            "type": "text",
+            "field_id": 146667005,
+            "label": "Briefly summarize the argument you just heard here:",
+            "config": {
+                "default_value": null,
+                "unique": false,
+                "description": null,
+                "hidden_create_view_edit": false,
+                "required": false,
+                "mapping": null,
+                "label": "Briefly summarize the argument you just heard here:",
+                "visible": true,
+                "delta": 44,
+                "hidden": false,
+                "settings": {
+                    "format": "html",
+                    "size": "large"
+                }
+            },
+            "external_id": "briefly-summarize-the-argument-you-just-made-here"
+        },
+        {
+            "status": "active",
+            "type": "text",
+            "field_id": 146667006,
+            "label": "Provide your refutation to the argument here:",
+            "config": {
+                "default_value": null,
+                "unique": false,
+                "description": null,
+                "hidden_create_view_edit": false,
+                "required": false,
+                "mapping": null,
+                "label": "Provide your refutation to the argument here:",
+                "visible": true,
+                "delta": 45,
+                "hidden": false,
+                "settings": {
+                    "format": "html",
+                    "size": "large"
+                }
+            },
+            "external_id": "provide-your-refutation-to-the-argument-here"
+        },
+        {
+            "status": "active",
+            "type": "category",
+            "field_id": 145749358,
+            "label": "Refutation Score",
+            "config": {
+                "default_value": null,
+                "unique": false,
+                "description": "0 – No summary or inaccurate summary, minimal to no refutation\n\n1 – Simple summary with minimal refutation to the AREI and/or states counterargument rather than refutation.\n\n2 – Accurate summary with direct refutation to the AREI, multiple layers of analysis\n",
+                "hidden_create_view_edit": false,
+                "required": false,
+                "mapping": null,
+                "label": "Refutation Score",
+                "visible": true,
+                "delta": 46,
+                "hidden": false,
+                "settings": {
+                    "multiple": false,
+                    "options": [
+                        {
+                            "status": "active",
+                            "text": "0",
+                            "id": 1,
+                            "color": "F7D1D0"
+                        },
+                        {
+                            "status": "active",
+                            "text": "1",
+                            "id": 2,
+                            "color": "F7F0C5"
+                        },
+                        {
+                            "status": "active",
+                            "text": "2",
+                            "id": 3,
+                            "color": "DCEBD8"
+                        }
+                    ],
+                    "display": "inline"
+                }
+            },
+            "external_id": "refutation-score"
+        },
+        {
+            "status": "active",
+            "type": "category",
+            "field_id": 146667007,
+            "label": "6) Current Events",
+            "config": {
+                "default_value": null,
+                "unique": false,
+                "description": null,
+                "hidden_create_view_edit": false,
+                "required": false,
+                "mapping": null,
+                "label": "6) Current Events",
+                "visible": true,
+                "delta": 47,
+                "hidden": false,
+                "settings": {
+                    "multiple": false,
+                    "options": [],
+                    "display": "list"
+                }
+            },
+            "external_id": "6-current-events"
+        },
+        {
+            "status": "active",
+            "type": "category",
+            "field_id": 146667008,
+            "label": "One of the greatest things about debate is that you learn more about the world around you in the process of preparing for and engaging in debates. ",
+            "config": {
+                "default_value": null,
+                "unique": false,
+                "description": null,
+                "hidden_create_view_edit": false,
+                "required": false,
+                "mapping": null,
+                "label": "One of the greatest things about debate is that you learn more about the world around you in the process of preparing for and engaging in debates. ",
+                "visible": true,
+                "delta": 48,
+                "hidden": false,
+                "settings": {
+                    "multiple": false,
+                    "options": [],
+                    "display": "list"
+                }
+            },
+            "external_id": "one-of-the-greatest-things-about-debate-is-that-you-lea"
+        },
+        {
+            "status": "active",
+            "type": "category",
+            "field_id": 146667009,
+            "label": " We want to get your perspective on important controversies and current events and find out how much you know about the world around you. If you do not know much about current events, it is okay. You will very soon!",
+            "config": {
+                "default_value": null,
+                "unique": false,
+                "description": null,
+                "hidden_create_view_edit": false,
+                "required": false,
+                "mapping": null,
+                "label": " We want to get your perspective on important controversies and current events and find out how much you know about the world around you. If you do not know much about current events, it is okay. You will very soon!",
+                "visible": true,
+                "delta": 49,
+                "hidden": false,
+                "settings": {
+                    "multiple": false,
+                    "options": [],
+                    "display": "list"
+                }
+            },
+            "external_id": "we-want-to-get-your-perspective-on-important-controvers"
+        },
+        {
+            "status": "active",
+            "type": "category",
+            "field_id": 146667010,
+            "label": "First, we want you to imagine that you are organizing a debate competition for your classmates. You get to choose three debate topics that everyone in your school will debate. You want to choose unique topics that reflect current events of today! ",
+            "config": {
+                "default_value": null,
+                "unique": false,
+                "description": null,
+                "hidden_create_view_edit": false,
+                "required": false,
+                "mapping": null,
+                "label": "First, we want you to imagine that you are organizing a debate competition for your classmates. You get to choose three debate topics that everyone in your school will debate. You want to choose unique topics that reflect current events of today! ",
+                "visible": true,
+                "delta": 50,
+                "hidden": false,
+                "settings": {
+                    "multiple": false,
+                    "options": [],
+                    "display": "list"
+                }
+            },
+            "external_id": "first-we-want-you-to-imagine-that-you-are-organizing-a-"
+        },
+        {
+            "status": "active",
+            "type": "category",
+            "field_id": 146667011,
+            "label": "*Debate topics are listed as statements that one side supports and another side opposes. For example: Boys and girls should attend separate schools.",
+            "config": {
+                "default_value": null,
+                "unique": false,
+                "description": null,
+                "hidden_create_view_edit": false,
+                "required": false,
+                "mapping": null,
+                "label": "*Debate topics are listed as statements that one side supports and another side opposes. For example: Boys and girls should attend separate schools.",
+                "visible": true,
+                "delta": 51,
+                "hidden": false,
+                "settings": {
+                    "multiple": false,
+                    "options": [],
+                    "display": "list"
+                }
+            },
+            "external_id": "debate-topics-are-listed-as-statements-that-one-side-su"
+        },
+        {
+            "status": "active",
+            "type": "category",
+            "field_id": 146667012,
+            "label": "What topics would you choose?",
+            "config": {
+                "default_value": null,
+                "unique": false,
+                "description": null,
+                "hidden_create_view_edit": false,
+                "required": false,
+                "mapping": null,
+                "label": "What topics would you choose?",
+                "visible": true,
+                "delta": 52,
+                "hidden": false,
+                "settings": {
+                    "multiple": false,
+                    "options": [],
+                    "display": "list"
+                }
+            },
+            "external_id": "what-topics-would-you-choose"
+        },
+        {
+            "status": "active",
+            "type": "text",
+            "field_id": 146667013,
+            "label": "Topic 1",
+            "config": {
+                "default_value": null,
+                "unique": false,
+                "description": null,
+                "hidden_create_view_edit": false,
+                "required": false,
+                "mapping": null,
+                "label": "Topic 1",
+                "visible": true,
+                "delta": 53,
+                "hidden": false,
+                "settings": {
+                    "format": "html",
+                    "size": "large"
+                }
+            },
+            "external_id": "topic-1"
+        },
+        {
+            "status": "active",
+            "type": "text",
+            "field_id": 146667015,
+            "label": "Topic 2",
+            "config": {
+                "default_value": null,
+                "unique": false,
+                "description": null,
+                "hidden_create_view_edit": false,
+                "required": false,
+                "mapping": null,
+                "label": "Topic 2",
+                "visible": true,
+                "delta": 54,
+                "hidden": false,
+                "settings": {
+                    "format": "html",
+                    "size": "large"
+                }
+            },
+            "external_id": "topic-2"
+        },
+        {
+            "status": "active",
+            "type": "text",
+            "field_id": 146667014,
+            "label": "Topic 3",
+            "config": {
+                "default_value": null,
+                "unique": false,
+                "description": null,
+                "hidden_create_view_edit": false,
+                "required": false,
+                "mapping": null,
+                "label": "Topic 3",
+                "visible": true,
+                "delta": 55,
+                "hidden": false,
+                "settings": {
+                    "format": "html",
+                    "size": "large"
+                }
+            },
+            "external_id": "topic-3"
+        },
+        {
+            "status": "active",
+            "type": "category",
+            "field_id": 146667016,
+            "label": "First, Donald Trump. Donald Trump shocked the world when he was elected president of the United States last November. He is the oldest man to ever take office and prior to becoming president he had no experience in government.",
+            "config": {
+                "default_value": null,
+                "unique": false,
+                "description": null,
+                "hidden_create_view_edit": false,
+                "required": false,
+                "mapping": null,
+                "label": "First, Donald Trump. Donald Trump shocked the world when he was elected president of the United States last November. He is the oldest man to ever take office and prior to becoming president he had no experience in government.",
+                "visible": true,
+                "delta": 56,
+                "hidden": false,
+                "settings": {
+                    "multiple": false,
+                    "options": [],
+                    "display": "list"
+                }
+            },
+            "external_id": "first-donald-trump-donald-trump-shocked-the-world-when-"
+        },
+        {
+            "status": "active",
+            "type": "text",
+            "field_id": 146667017,
+            "label": "He has now been president for over 100 days. What is your assessment of the Donald Trump presidency? What do you see as the key successes and failures of the Trump administration so far?",
+            "config": {
+                "default_value": null,
+                "unique": false,
+                "description": null,
+                "hidden_create_view_edit": false,
+                "required": false,
+                "mapping": null,
+                "label": "He has now been president for over 100 days. What is your assessment of the Donald Trump presidency? What do you see as the key successes and failures of the Trump administration so far?",
+                "visible": true,
+                "delta": 57,
+                "hidden": false,
+                "settings": {
+                    "format": "html",
+                    "size": "large"
+                }
+            },
+            "external_id": "he-has-now-been-president-for-over-100-days-what-is-you"
+        },
+        {
+            "status": "active",
+            "type": "category",
+            "field_id": 146667018,
+            "label": "Second, terrorism. In the past two decades one of the major global threats has been terrorism. Recently, there have been several terrorist attacks around the world in cities like Paris, Brussels, and London.",
+            "config": {
+                "default_value": null,
+                "unique": false,
+                "description": null,
+                "hidden_create_view_edit": false,
+                "required": false,
+                "mapping": null,
+                "label": "Second, terrorism. In the past two decades one of the major global threats has been terrorism. Recently, there have been several terrorist attacks around the world in cities like Paris, Brussels, and London.",
+                "visible": true,
+                "delta": 58,
+                "hidden": false,
+                "settings": {
+                    "multiple": false,
+                    "options": [],
+                    "display": "list"
+                }
+            },
+            "external_id": "second-terrorism-in-the-past-two-decades-one-of-the-maj"
+        },
+        {
+            "status": "active",
+            "type": "text",
+            "field_id": 146667019,
+            "label": "Many scholars and politicians are busy trying to understand terrorism and why it happened. What do you think is the root cause of terrorism? Why do you think this?",
+            "config": {
+                "default_value": null,
+                "unique": false,
+                "description": null,
+                "hidden_create_view_edit": false,
+                "required": false,
+                "mapping": null,
+                "label": "Many scholars and politicians are busy trying to understand terrorism and why it happened. What do you think is the root cause of terrorism? Why do you think this?",
+                "visible": true,
+                "delta": 59,
+                "hidden": false,
+                "settings": {
+                    "format": "html",
+                    "size": "large"
+                }
+            },
+            "external_id": "many-scholars-and-politicians-are-busy-trying-to-unders"
+        },
+        {
+            "status": "active",
+            "type": "category",
+            "field_id": 145749365,
+            "label": "Current Events Score",
+            "config": {
+                "default_value": null,
+                "unique": false,
+                "description": "0 – No apparent understanding of current events.\n\n1 – Aware of basic awareness of current events but no opinion about or background knowledge of.\n\n2 – Aware, opinionated and knowledgeable about current events.\n",
+                "hidden_create_view_edit": false,
+                "required": false,
+                "mapping": null,
+                "label": "Current Events Score",
+                "visible": true,
+                "delta": 60,
+                "hidden": false,
+                "settings": {
+                    "multiple": false,
+                    "options": [
+                        {
+                            "status": "active",
+                            "text": "0",
+                            "id": 1,
+                            "color": "F7D1D0"
+                        },
+                        {
+                            "status": "active",
+                            "text": "1",
+                            "id": 2,
+                            "color": "F7F0C5"
+                        },
+                        {
+                            "status": "active",
+                            "text": "2",
+                            "id": 3,
+                            "color": "DCEBD8"
+                        }
+                    ],
+                    "display": "inline"
+                }
+            },
+            "external_id": "current-events-score"
+        },
+        {
+            "status": "active",
+            "type": "text",
+            "field_id": 145749366,
+            "label": "You will now be asked to pick a topic. Take 5 minutes to prepare a well organized speech with intro, body, and conclusion. Provide as many details and evidence as you can. Speech should be at least one minute and no more than five minutes.",
+            "config": {
+                "default_value": null,
+                "unique": false,
+                "description": null,
+                "hidden_create_view_edit": false,
+                "required": false,
+                "mapping": null,
+                "label": "You will now be asked to pick a topic. Take 5 minutes to prepare a well organized speech with intro, body, and conclusion. Provide as many details and evidence as you can. Speech should be at least one minute and no more than five minutes.",
+                "visible": true,
+                "delta": 61,
+                "hidden": false,
+                "settings": {
+                    "format": "plain",
+                    "size": "small"
+                }
+            },
+            "external_id": "you-will-now-be-asked-to-pick-a-topic-take-5-minutes-to"
+        },
+        {
+            "status": "active",
+            "type": "text",
+            "field_id": 145749367,
+            "label": "On-Site PS Comments",
+            "config": {
+                "default_value": null,
+                "unique": false,
+                "description": null,
+                "hidden_create_view_edit": false,
+                "required": false,
+                "mapping": null,
+                "label": "On-Site PS Comments",
+                "visible": true,
+                "delta": 62,
+                "hidden": false,
+                "settings": {
+                    "format": "html",
+                    "size": "large"
+                }
+            },
+            "external_id": "on-site-ps-comments"
+        },
+        {
+            "status": "active",
+            "type": "category",
+            "field_id": 145749368,
+            "label": "Public Speaking Score",
+            "config": {
+                "default_value": null,
+                "unique": false,
+                "description": "0 – Unable to give a coherent speech. Less than 30 seconds speaking. Major pronunciation and grammar problems\n\n1 – Language is understood, is able to speak for more than 30 seconds, content is relevant to the question, lacks organization, lacks basic public speaking skills gestures, eye contact, voice inflection.\n\n2 – Language is clearly understood, is able to speak for more than 1 minute, content is relevant and organized, displays some basic public speaking skills gestures, eye contact and voice inflection.\n",
+                "hidden_create_view_edit": false,
+                "required": false,
+                "mapping": null,
+                "label": "Public Speaking Score",
+                "visible": true,
+                "delta": 63,
+                "hidden": false,
+                "settings": {
+                    "multiple": false,
+                    "options": [
+                        {
+                            "status": "active",
+                            "text": "0",
+                            "id": 1,
+                            "color": "F7D1D0"
+                        },
+                        {
+                            "status": "active",
+                            "text": "1",
+                            "id": 2,
+                            "color": "F7F0C5"
+                        },
+                        {
+                            "status": "active",
+                            "text": "2",
+                            "id": 3,
+                            "color": "DCEBD8"
+                        }
+                    ],
+                    "display": "inline"
+                }
+            },
+            "external_id": "public-speaking-score"
+        },
+        {
+            "status": "active",
+            "type": "email",
+            "field_id": 145749369,
+            "label": "Evaluator Email",
+            "config": {
+                "default_value": null,
+                "unique": false,
+                "description": null,
+                "hidden_create_view_edit": false,
+                "required": false,
+                "mapping": null,
+                "label": "Evaluator Email",
+                "visible": true,
+                "delta": 64,
+                "hidden": false,
+                "settings": {
+                    "include_in_bcc": false,
+                    "include_in_cc": false,
+                    "possible_types": [
+                        "work",
+                        "home",
+                        "other"
+                    ]
+                }
+            },
+            "external_id": "evaluator-email"
+        },
+        {
+            "status": "active",
+            "type": "category",
+            "field_id": 145749370,
+            "label": "Level Recommendation",
+            "config": {
+                "default_value": null,
+                "unique": false,
+                "description": null,
+                "hidden_create_view_edit": false,
+                "required": false,
+                "mapping": null,
+                "label": "Level Recommendation",
+                "visible": true,
+                "delta": 65,
+                "hidden": false,
+                "settings": {
+                    "multiple": true,
+                    "options": [
+                        {
+                            "status": "active",
+                            "text": "Public Speaking and Dramatic Storytelling",
+                            "id": 1,
+                            "color": "DCEBD8"
+                        },
+                        {
+                            "status": "active",
+                            "text": "Presentations and Speechwriting",
+                            "id": 2,
+                            "color": "DCEBD8"
+                        },
+                        {
+                            "status": "active",
+                            "text": "Introduction to Debate",
+                            "id": 3,
+                            "color": "DCEBD8"
+                        },
+                        {
+                            "status": "active",
+                            "text": "Introduction to Debate 8 Plus",
+                            "id": 7,
+                            "color": "DCEBD8"
+                        },
+                        {
+                            "status": "active",
+                            "text": "Argument Foundations",
+                            "id": 4,
+                            "color": "DCEBD8"
+                        },
+                        {
+                            "status": "active",
+                            "text": "Policy Debate and/or Original Oratory",
+                            "id": 5,
+                            "color": "DCEBD8"
+                        },
+                        {
+                            "status": "active",
+                            "text": "Advanced Debate and/or Original Oratory",
+                            "id": 6,
+                            "color": "DCEBD8"
+                        },
+                        {
+                            "status": "active",
+                            "text": "Original Oratory",
+                            "id": 12,
+                            "color": "DCEBD8"
+                        },
+                        {
+                            "status": "active",
+                            "text": "TED Talk",
+                            "id": 8,
+                            "color": "DCEBD8"
+                        },
+                        {
+                            "status": "active",
+                            "text": "Extemporaneous Speaking",
+                            "id": 13,
+                            "color": "DCEBD8"
+                        },
+                        {
+                            "status": "active",
+                            "text": "Elite Debate League (JV)",
+                            "id": 14,
+                            "color": "DCEBD8"
+                        },
+                        {
+                            "status": "active",
+                            "text": "Elite Debate League (V)",
+                            "id": 15,
+                            "color": "DCEBD8"
+                        },
+                        {
+                            "status": "active",
+                            "text": "Rejected",
+                            "id": 10,
+                            "color": "F7D1D0"
+                        },
+                        {
+                            "status": "deleted",
+                            "text": "Middle School Elite ",
+                            "id": 11,
+                            "color": "DCEBD8"
+                        },
+                        {
+                            "status": "deleted",
+                            "text": "Elite Debate League",
+                            "id": 9,
+                            "color": "DCEBD8"
+                        }
+                    ],
+                    "display": "inline"
+                }
+            },
+            "external_id": "level-recommendation"
+        },
+        {
+            "status": "active",
+            "type": "category",
+            "field_id": 145749371,
+            "label": "Evaluation Status",
+            "config": {
+                "default_value": null,
+                "unique": false,
+                "description": null,
+                "hidden_create_view_edit": false,
+                "required": false,
+                "mapping": null,
+                "label": "Evaluation Status",
+                "visible": true,
+                "delta": 66,
+                "hidden": false,
+                "settings": {
+                    "multiple": false,
+                    "options": [
+                        {
+                            "status": "active",
+                            "text": "Evaluation Complete",
+                            "id": 1,
+                            "color": "DCEBD8"
+                        },
+                        {
+                            "status": "deleted",
+                            "text": "Pending Evaluation",
+                            "id": 2,
+                            "color": "F7F0C5"
+                        }
+                    ],
+                    "display": "inline"
+                }
+            },
+            "external_id": "category"
+        },
+        {
+            "status": "active",
+            "type": "text",
+            "field_id": 146592323,
+            "label": "Text",
+            "config": {
+                "default_value": null,
+                "unique": false,
+                "description": null,
+                "hidden_create_view_edit": false,
+                "required": false,
+                "mapping": null,
+                "label": "Text",
+                "visible": true,
+                "delta": 67,
+                "hidden": false,
+                "settings": {
+                    "format": "html",
+                    "size": "large"
+                }
+            },
+            "external_id": "text"
+        },
+        {
+            "status": "active",
+            "type": "image",
+            "field_id": 146592325,
+            "label": "Image",
+            "config": {
+                "default_value": null,
+                "unique": false,
+                "description": "Supported image types: .jpg .gif .png",
+                "hidden_create_view_edit": false,
+                "required": false,
+                "mapping": null,
+                "label": "Image",
+                "visible": true,
+                "delta": 68,
+                "hidden": false,
+                "settings": {
+                    "allowed_mimetypes": [
+                        "image/png"
+                    ]
+                }
+            },
+            "external_id": "image"
+        }
+    ],
+    "space_id": 5175131,
+    "current_revision": 24,
+    "token": null,
+    "original": 18297059
+}
