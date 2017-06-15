@@ -71,7 +71,6 @@ app.post('/grade', urlencodedParser, (req, res) => {
 		.then(function(responseData) {
 			//console.log(JSON.stringify(responseData, null, 4));
 			var itemID = responseData.item_id;
-<<<<<<< HEAD
 			var grade = Number(lookup(responseData, 'student-grade'));
 			var debXP = Number(lookup(responseData, 'debate-xp'));
 			var classXP = Number(lookup(responseData, 'class-xp'));
@@ -81,17 +80,6 @@ app.post('/grade', urlencodedParser, (req, res) => {
 			var ps = Number(lookup(responseData, 'public-speaking-score'));
 
 			var placement = grader(grade, debXP, classXP, arg, ref, cs, ps);
-=======
-			var grade = Number(lookup(responseData, 'student-grade'))
-			var debXP = Number(lookup(responseData, 'debate-xp'))
-			var classXP = Number(lookup(responseData, 'class-xp'))
-			var arg = Number(lookup(responseData, 'argument-score'))
-			var ref = Number(lookup(responseData, 'refutation-score'))
-			var cs = Number(lookup(responseData, 'current-events-score'))
-			var ps = Number(lookup(responseData, 'public-speaking-score'))
-
-			var placement = grader(grade, debXP, classXP, arg, ref, cs, ps)
->>>>>>> testing
 			var fieldPath = `/item/${itemID}/value/145749370`
 			var requestData = { value: placement }
 
@@ -183,12 +171,8 @@ app.post('/signup', urlencodedParser, (req, res) => {
 
 			var fieldPath = `/item/${student.itemID}/value/signup-link-2`
 			var url = `https://podio.com/webforms/18489238/1244279?fields[title]=${student.firstName}&fields[student-last-name]=${student.lastName}&fields[parent-first-name]=${student.parentFirstName}&fields[parent-phone-number]=${student.parentPhone}&fields[parent-last-name]=${student.parentLastName}&fields[2016-2017-incoming-grade]=${student.grade}&fields[age]=${student.age}&fields[school]=${student.school}&fields[previous-course]=${student.previousCourse}&fields[placement-recommendation]=${student.recommendedCourse}&fields[parent-email-address]=${student.parentEmail}`
-<<<<<<< HEAD
 
 			return shorten(url, fieldPath)
-=======
-			return shorten(url,fieldPath)
->>>>>>> testing
 		})
 		.then(function(responseData) {
 			var requestData = { url: responseData.url }
