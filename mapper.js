@@ -8,7 +8,7 @@ var podio = new Podio({
 	clientId: creds.clientID,
 	clientSecret: creds.secret
 })
-
+var buttonMap = {}
 podio.authenticateWithApp(creds.appID, creds.appToken, function(err) {
     if (err) throw err
 	//console.log('authenticated with Podio')
@@ -19,12 +19,14 @@ podio.authenticateWithApp(creds.appID, creds.appToken, function(err) {
         return podio.request('GET', appPath)
     })
     .then((responseData) => {
-        module.exports =  map(responseData)
+        console.log(map(responseData))
     })
     .catch(function(e) {
 		console.log(e)
 	})
 })
+
+module.exports = buttonMap
 
 var map = function(app) {
 
