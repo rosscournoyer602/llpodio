@@ -5,14 +5,10 @@ var Podio = require('podio-js').api
 var bodyParser = require('body-parser')
 var grader = require('./placementGrader')
 var app = express()
-<<<<<<< HEAD
-var shorten = require('./shortener')
-=======
 var creds = require('./creds.json')
 var shorten = require('./shortener')
 var lookup = require('./lookup.js')
 //var map = require('./mapper.js')
->>>>>>> testing
 
 var podio = new Podio({
 	authType: 'app',
