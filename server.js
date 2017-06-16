@@ -25,7 +25,6 @@ podio.authenticateWithApp(creds.appID, creds.appToken, function(err) {
 })
 
 app.get('/', function(req,res) {
-	//console.log(req);
 	res.send('LL Podio Client is Up and Listening')
 })
 
@@ -58,7 +57,6 @@ app.post('/grade', urlencodedParser, (req, res) => {
 	podio.isAuthenticated()
 		.then(function () {
 			var appItemID = Object.keys(req.body)[0]
-			console.log(appItemID)
 			var token = podio.authObject.accessToken
 			var itemPath = `/app/${creds.ptAppID}/item/${appItemID}?oauth_token=${token}`;
 
@@ -82,6 +80,7 @@ app.post('/grade', urlencodedParser, (req, res) => {
 			return podio.request('PUT', fieldPath, requestData)
 		})
 		.then(function(responseData) {
+			console.log(JSON.stringify(responseData, null, 4))
 			res.end(JSON.stringify(responseData, null, 4))	
 		})
 		.catch(function(f) {
