@@ -15,18 +15,9 @@
 // Advanced Debate - 6
 // Middle School Elite - 11
 // Elite - 9
-function getMap(printMap) {
-	var map = require('./mapper.js')
-	printMap()
-}
 
-function printMap(map) {
-	console.log(map)
-}
 
-getMap(printMap)
-
-function grade(grade, classXP, compXP, arg, ref, ce, ps) {
+var grade =  function(grade, classXP, compXP, arg, ref, ce, ps) {
 	var total = classXP + compXP + arg + ref + ce + ps
 	var totalBeforePS = classXP + compXP + arg + ref + ce
 	var totalXP = classXP + compXP
