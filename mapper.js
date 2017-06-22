@@ -11,7 +11,6 @@ var podio = new Podio({
 var buttonMap = {}
 podio.authenticateWithApp(creds.appID, creds.appToken, function(err) {
     if (err) throw err
-	//console.log('authenticated with Podio')
 
     podio.isAuthenticated()
     .then(() => {
@@ -20,10 +19,12 @@ podio.authenticateWithApp(creds.appID, creds.appToken, function(err) {
     })
     .then((responseData) => {
         console.log(map(responseData))
+        return map(responseData)
     })
     .catch(function(e) {
 		console.log(e)
 	})
+    
 })
 
 module.exports = buttonMap
