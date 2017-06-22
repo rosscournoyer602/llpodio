@@ -16,7 +16,6 @@
 // Middle School Elite - 11
 // Elite - 9
 
-
 var grade =  function(grade, classXP, compXP, arg, ref, ce, ps) {
 	var total = classXP + compXP + arg + ref + ce + ps
 	var totalBeforePS = classXP + compXP + arg + ref + ce
