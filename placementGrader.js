@@ -15,6 +15,16 @@
 // Advanced Debate - 6
 // Middle School Elite - 11
 // Elite - 9
+function getMap(printMap) {
+	var map = require('./mapper.js')
+	printMap()
+}
+
+function printMap(map) {
+	console.log(map)
+}
+
+getMap(printMap)
 
 function grade(grade, classXP, compXP, arg, ref, ce, ps) {
 	var total = classXP + compXP + arg + ref + ce + ps
@@ -24,6 +34,7 @@ function grade(grade, classXP, compXP, arg, ref, ce, ps) {
 	var argRefCe = arg + ref + ce
 	var placement
 	var courseRec
+
 
 	//use map variable to make readable return values
 	if (grade === 5) {
