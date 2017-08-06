@@ -8,7 +8,6 @@ var app = express()
 var creds = require('./creds.json')
 var shorten = require('./shortener')
 var lookup = require('./lookup.js')
-//var map = require('./mapper.js')
 
 var podio = new Podio({
 	authType: 'app',
@@ -165,7 +164,7 @@ app.post('/signup', urlencodedParser, (req, res) => {
 			}
 
 			var fieldPath = `/item/${student.itemID}/value/signup-link-2`
-			var url = `https://podio.com/webforms/18489238/1244279?fields[title]=${student.firstName}&fields[student-last-name]=${student.lastName}&fields[parent-first-name]=${student.parentFirstName}&fields[parent-phone-number]=${student.parentPhone}&fields[parent-last-name]=${student.parentLastName}&fields[2016-2017-incoming-grade]=${student.grade}&fields[age]=${student.age}&fields[school]=${student.school}&fields[previous-course]=${student.previousCourse}&fields[placement-recommendation]=${student.recommendedCourse}&fields[parent-email-address]=${student.parentEmail}`
+			var url = `https://podio.com/webforms/19105603/1286053?fields[title]=${student.firstName}&fields[student-last-name]=${student.lastName}&fields[parent-first-name]=${student.parentFirstName}&fields[parent-phone-number]=${student.parentPhone}&fields[parent-last-name]=${student.parentLastName}&fields[2016-2017-incoming-grade]=${student.grade}&fields[age]=${student.age}&fields[school]=${student.school}&fields[previous-course]=${student.previousCourse}&fields[placement-recommendation]=${student.recommendedCourse}&fields[parent-email-address]=${student.parentEmail}`
 
 			return shorten(url, fieldPath)
 		})
@@ -185,6 +184,30 @@ app.post('/signup', urlencodedParser, (req, res) => {
 
 app.post('/leads', urlencodedParser, (req, res) => {
 	podio.isAuthenticated()
-	.then(function() {}) 
+	.then(function() {
+		var checkLeads = require('./lead_conversion')
+		return checkLeads()
+	})
+	.then(function(responseData) {
+		res.end()
+	})
+	.catch(function(f) {
+		console.log(f)
+		res.end()
+	})
 })
 
+app.post('/current', urlencodedParser, (req, res) => {
+	podio.isAuthenticated()
+	.then(function() {
+		var checkCurrent = require('./currentConversion')
+		return checkCurrent()
+	})
+	.then(function(responseData) {
+		res.end()
+	})
+	.catch(function(f) {
+		console.log(f)
+		res.end()
+	})
+})
