@@ -8,16 +8,15 @@
 //2afb0b7894a64a32a1faa2ef90fd5dc3
 
 const Podio = require('podio-js').api
-const creds = require('./creds.json')
 
 const podio = new Podio({
 	authType: 'app',
-	clientId: creds.clientID,
-	clientSecret: creds.secret
+	clientId: process.env.clientID,
+	clientSecret: process.env.secret
 })
 // item count /item/app/{app_id}/count
 function getAllSignupEmails(count) { 
-    // podio.authenticateWithApp(creds.sandboxID, creds.sandboxToken, (err) => {
+    // podio.authenticateWithApp(process.env.sandboxID, process.env.sandboxToken, (err) => {
         //if (err) throw err
 
         console.log('authenticated with Podio')
@@ -29,7 +28,7 @@ function getAllSignupEmails(count) {
 
         for (k=1; k <= count.count; ++k) {
             let id = k.toString()
-            let itemPath = `/app/${creds.signUpID}/item/${id}`
+            let itemPath = `/app/${process.env.signUpID}/item/${id}`
             
             //populate array with Podio requests that will return signups
             signups.push(podio.request('GET', itemPath)) 
@@ -39,7 +38,7 @@ function getAllSignupEmails(count) {
             var signUpEmails = values.map(function(signup) {
                 //console.log(signup)
                 let id = signup.item_id
-                let itemPath = `/item/${id}/value/${creds.signUpEmail}`
+                let itemPath = `/item/${id}/value/${process.env.signUpEmail}`
                 return podio.request('GET', itemPath)
             })
             //when all the requests come back
@@ -76,7 +75,7 @@ function getAllLeads(signUpEmails) {
             "limit": limit
         }
         let batchOfRequests = new Promise((res, rej) => {
-            res(podio.request('POST', `/item/app/${creds.appID}/filter/`, request))
+            res(podio.request('POST', `/item/app/${process.env.appID}/filter/`, request))
         })
         .then((responseData) => {
             let listID = new Array()
@@ -88,7 +87,7 @@ function getAllLeads(signUpEmails) {
         }).then((listID) => {
             let emails = new Array()
             for(i=0; i<listID.length; ++i) {
-                let fieldPath = `/item/${listID[i]}/value/${creds.appEmail}`
+                let fieldPath = `/item/${listID[i]}/value/${process.env.appEmail}`
                 emails.push(podio.request('GET', fieldPath))
             }
             Promise.all(emails).then((returnedValues) => {
@@ -113,7 +112,7 @@ function getAllLeads(signUpEmails) {
             .then((leadsList) => {
                 let updateRequests = new Array()
                 for(i=0; i<leadsList.length; ++i) {
-                    let fieldPath = `/item/${leadsList[i].leadId}/value/${creds.appStudentStatus}`
+                    let fieldPath = `/item/${leadsList[i].leadId}/value/${process.env.appStudentStatus}`
                     let request = { value: 5 }
 
                     if(signUpEmails.includes(leadsList[i].leadEmail)) {
@@ -133,11 +132,11 @@ function getAllLeads(signUpEmails) {
 }
 
 function run() {
-    podio.authenticateWithApp(creds.signUpID, creds.signUpToken, (err) => {
+    podio.authenticateWithApp(process.env.signUpID, process.env.signUpToken, (err) => {
         if (err) throw err
 
         let count = new Promise((res, rej) => {
-            res(podio.request('GET', `item/app/${creds.signUpID}/count`))
+            res(podio.request('GET', `item/app/${process.env.signUpID}/count`))
         })
         .then((count) => {
             getAllSignupEmails(count)
