@@ -3,10 +3,10 @@
 var express = require('express')
 var Podio = require('podio-js').api
 var bodyParser = require('body-parser')
-var grader = require('./placementGrader')
+var grader = require('./src/placementGrader')
 var app = express()
-var shorten = require('./shortener')
-var lookup = require('./lookup.js')
+var shorten = require('./src/shortener')
+var lookup = require('./src/lookup.js')
 
 var podio = new Podio({
 	authType: 'app',
@@ -184,7 +184,7 @@ app.post('/signup', urlencodedParser, (req, res) => {
 app.post('/leads', urlencodedParser, (req, res) => {
 	podio.isAuthenticated()
 	.then(function() {
-		var checkLeads = require('./lead_conversion')
+		var checkLeads = require('./src/lead_conversion')
 		return checkLeads()
 	})
 	.then(function(responseData) {
@@ -199,7 +199,7 @@ app.post('/leads', urlencodedParser, (req, res) => {
 app.post('/current', urlencodedParser, (req, res) => {
 	podio.isAuthenticated()
 	.then(function() {
-		var checkCurrent = require('./currentConversion')
+		var checkCurrent = require('./src/currentConversion')
 		return checkCurrent()
 	})
 	.then(function(responseData) {
