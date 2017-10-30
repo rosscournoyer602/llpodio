@@ -157,13 +157,13 @@ app.post('/signup', urlencodedParser, (req, res) => {
 				"parentEmail": lookup(responseData, 'parent-email-2', 'PARENT EMAIL'),
 				"parentPhone": lookup(responseData, 'parent-phone-2', 'PARENT PHONE'),
 				"homeAddress": lookup(responseData, 'home-address', 'ADDRESS'),
-				"previousCourse": lookup(responseData, 'previous-course-if-any', 'PREVIOUS'),
-				"recommendedCourse": lookup(responseData, 'placement-recommentation','Empty'),
+				"previousCourse": lookup(responseData, 'placement-recommentation', 'N/A'),
+				"recommendedCourse": lookup(responseData, 's18-course','Empty'),
 				"finalPrice": lookup(responseData, 'final-price', '8800')
 			}
 
 			var fieldPath = `/item/${student.itemID}/value/signup-link-2`
-			var url = `https://podio.com/webforms/19105603/1286053?fields[title]=${student.firstName}&fields[student-last-name]=${student.lastName}&fields[parent-first-name]=${student.parentFirstName}&fields[parent-phone-number]=${student.parentPhone}&fields[parent-last-name]=${student.parentLastName}&fields[2016-2017-incoming-grade]=${student.grade}&fields[age]=${student.age}&fields[school]=${student.school}&fields[previous-course]=${student.previousCourse}&fields[placement-recommendation]=${student.recommendedCourse}&fields[parent-email-address]=${student.parentEmail}`
+			var url = `${process.env.signUpURL}?fields[title]=${student.firstName}&fields[student-last-name]=${student.lastName}&fields[parent-first-name]=${student.parentFirstName}&fields[parent-phone-number]=${student.parentPhone}&fields[parent-last-name]=${student.parentLastName}&fields[2016-2017-incoming-grade]=${student.grade}&fields[age]=${student.age}&fields[school]=${student.school}&fields[previous-course]=${student.previousCourse}&fields[placement-recommendation]=${student.recommendedCourse}&fields[parent-email-address]=${student.parentEmail}`
 
 			return shorten(url, fieldPath)
 		})
